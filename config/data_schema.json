@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "description": "Canonical data schema for LightHunter Singularity v1. Defines logical entities and field mappings from multiple data sources (eastmoney, ths, tencent, sina...).",
+  "entities": {
+    "stock_snapshot": {
+      "description": "Intraday snapshot for A-share stocks at tick/second-level.",
+      "primary_key": [
+        "trade_date",
+        "ts",
+        "code"
+      ],
+      "canonical_fields": {
+        "trade_date": "str:YYYY-MM-DD",
+        "ts": "int64:epoch_ms",
+        "code": "str:6-digit A-share code",
+        "market": "str:SH/SZ/STAR/BJ",
+        "last": "float:last traded price",
+        "open": "float",
+        "high": "float",
+        "low": "float",
+        "prev_close": "float",
+        "volume": "float:shares traded since open",
+        "amount": "float:CNY traded since open",
+        "bid1": "float",
+        "bid1_volume": "float",
+        "ask1": "float",
+        "ask1_volume": "float",
+        "limit_up": "float",
+        "limit_down": "float",
+        "turnover_rate": "float:current turnover rate",
+        "suspension": "int:0=normal,1=suspended"
+      },
+      "sources": {
+        "tencent": {
+          "time_field": "time",
+          "field_mapping": {
+            "last": "price",
+            "open": "open",
+            "high": "high",
+            "low": "low",
+            "prev_close": "yestclose",
+            "volume": "volume",
+            "amount": "amount",
+            "bid1": "bid1",
+            "bid1_volume": "bid1_volume",
+            "ask1": "ask1",
+            "ask1_volume": "ask1_volume",
+            "limit_up": "limit_up",
+            "limit_down": "limit_down"
+          }
+        },
+        "eastmoney": {
+          "time_field": "time",
+          "field_mapping": {
+            "last": "f43",
+            "open": "f46",
+            "high": "f44",
+            "low": "f45",
+            "prev_close": "f60",
+            "volume": "f47",
+            "amount": "f48",
+            "limit_up": "f51",
+            "limit_down": "f52"
+          }
+        },
+        "ths": {
+          "time_field": "time",
+          "field_mapping": {
+            "last": "price",
+            "open": "open",
+            "high": "high",
+            "low": "low",
+            "prev_close": "pre_close",
+            "volume": "volume",
+            "amount": "amount"
+          }
+        }
+      }
+    },
+    "minute_bar": {
+      "description": "1-minute OHLCV bars aggregated from snapshots or provider-specific minute endpoints.",
+      "primary_key": [
+        "trade_date",
+        "minute",
+        "code"
+      ],
+      "canonical_fields": {
+        "trade_date": "str:YYYY-MM-DD",
+        "minute": "str:HH:MM",
+        "code": "str",
+        "open": "float",
+        "high": "float",
+        "low": "float",
+        "close": "float",
+        "volume": "float",
+        "amount": "float",
+        "vwap": "float:volume weighted avg price",
+        "factor": "float:split&dividend adjustment factor(optional)"
+      },
+      "sources": {
+        "internal_ts": {
+          "from_entity": "stock_snapshot",
+          "aggregation_logic": "aggregate intraday snapshots by 1-minute buckets"
+        }
+      }
+    },
+    "daily_bar": {
+      "description": "End-of-day OHLCV bars including adjustment factors.",
+      "primary_key": [
+        "trade_date",
+        "code"
+      ],
+      "canonical_fields": {
+        "trade_date": "str:YYYY-MM-DD",
+        "code": "str",
+        "open": "float",
+        "high": "float",
+        "low": "float",
+        "close": "float",
+        "volume": "float",
+        "amount": "float",
+        "vwap": "float",
+        "turnover_rate": "float",
+        "free_float_mv": "float:free float market value",
+        "total_mv": "float:total market value",
+        "factor": "float:adjustment factor",
+        "is_limit_up": "int:1 if limit up",
+        "is_limit_down": "int:1 if limit down"
+      },
+      "sources": {
+        "eastmoney": {
+          "endpoint": "kline",
+          "field_mapping": {
+            "open": "open",
+            "high": "high",
+            "low": "low",
+            "close": "close",
+            "volume": "volume",
+            "amount": "amount"
+          }
+        },
+        "tencent": {
+          "endpoint": "kline",
+          "field_mapping": {
+            "open": "open",
+            "high": "high",
+            "low": "low",
+            "close": "close",
+            "volume": "volume",
+            "amount": "amount"
+          }
+        }
+      }
+    },
+    "fund_flow": {
+      "description": "资金流向指标（单票/全市场）。",
+      "primary_key": [
+        "trade_date",
+        "code"
+      ],
+      "canonical_fields": {
+        "trade_date": "str:YYYY-MM-DD",
+        "code": "str",
+        "main_inflow": "float",
+        "main_outflow": "float",
+        "large_inflow": "float",
+        "large_outflow": "float",
+        "mid_inflow": "float",
+        "mid_outflow": "float",
+        "small_inflow": "float",
+        "small_outflow": "float",
+        "net_inflow": "float"
+      },
+      "sources": {
+        "eastmoney": {
+          "endpoint": "fundflow",
+          "field_mapping": {
+            "main_inflow": "main_in",
+            "main_outflow": "main_out",
+            "net_inflow": "net_main"
+          }
+        }
+      }
+    },
+    "concept": {
+      "description": "概念/题材归属关系。",
+      "primary_key": [
+        "concept_id",
+        "code"
+      ],
+      "canonical_fields": {
+        "concept_id": "str",
+        "concept_name": "str",
+        "code": "str",
+        "source": "str",
+        "first_seen": "str:YYYY-MM-DD",
+        "last_seen": "str:YYYY-MM-DD"
+      },
+      "sources": {
+        "ths": {
+          "endpoint": "concept_stock_list",
+          "field_mapping": {
+            "concept_id": "plate_id",
+            "concept_name": "plate_name"
+          }
+        },
+        "eastmoney": {
+          "endpoint": "theme_list",
+          "field_mapping": {
+            "concept_id": "code",
+            "concept_name": "name"
+          }
+        }
+      }
+    },
+    "news": {
+      "description": "新闻/公告条目。",
+      "primary_key": [
+        "id"
+      ],
+      "canonical_fields": {
+        "id": "str",
+        "publish_time": "str:YYYY-MM-DD HH:MM:SS",
+        "title": "str",
+        "summary": "str",
+        "content": "str(optional)",
+        "source": "str",
+        "codes": "list[str]:related stocks"
+      },
+      "sources": {
+        "eastmoney": {
+          "endpoint": "news_list",
+          "field_mapping": {
+            "id": "news_id",
+            "publish_time": "time",
+            "title": "title",
+            "summary": "summary"
+          }
+        }
+      }
+    }
+  }
+}

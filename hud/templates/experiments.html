@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}LightHunter HUD - 实验列表{% endblock %}
+
+{% block content %}
+<div class="section">
+  <h2>ExperimentLab 实验列表</h2>
+  {% if not experiments %}
+  <p class="muted">暂无实验记录。</p>
+  {% else %}
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Name</th>
+        <th>Start</th>
+        <th>End</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for exp in experiments %}
+      <tr>
+        <td class="mono">
+          <a href="/experiment/{{ exp.id }}">{{ exp.id }}</a>
+        </td>
+        <td>{{ exp.type or exp.exp_type or "-" }}</td>
+        <td>{{ exp.status or "-" }}</td>
+        <td>{{ exp.name or "" }}</td>
+        <td class="small mono">{{ exp.start_time or "-" }}</td>
+        <td class="small mono">{{ exp.end_time or "-" }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+{% endblock %}

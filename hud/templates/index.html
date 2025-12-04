@@ -1,0 +1,245 @@
+{% extends "base.html" %}
+
+{% block title %}LightHunter HUD - 实时状态{% endblock %}
+
+{% block extra_head %}
+<script>
+  async function fetchStatus() {
+    try {
+      const resp = await fetch("/api/status");
+      if (!resp.ok) return;
+      const data = await resp.json();
+      renderStatus(data);
+    } catch (e) {
+      console.error("fetchStatus error", e);
+    }
+  }
+
+  function renderStatus(data) {
+    const ts = data.time || "-";
+    const uptime = data.uptime_sec || 0;
+    const eventsTotal = data.events_total || 0;
+    const topics = data.topics || {};
+    const heartbeats = data.heartbeats || {};
+    const signals = data.signals || [];
+    const trades = data.trades || {};
+    const risk = data.risk || {};
+
+    // 概览
+    document.getElementById("ts").textContent = ts;
+    document.getElementById("uptime").textContent = uptime + " s";
+    document.getElementById("events_total").textContent = eventsTotal;
+
+    // Topic 统计
+    const topicsBody = document.getElementById("topics-body");
+    topicsBody.innerHTML = "";
+    Object.keys(topics)
+      .sort()
+      .forEach((k) => {
+        const st = topics[k];
+        const tr = document.createElement("tr");
+        tr.innerHTML =
+          "<td>" +
+          k +
+          "</td>" +
+          "<td>" +
+          (st.count || 0) +
+          "</td>" +
+          "<td>" +
+          (st.last_ts || "-") +
+          "</td>" +
+          "<td>" +
+          (st.last_source || "-") +
+          "</td>";
+        topicsBody.appendChild(tr);
+      });
+
+    // Heartbeats
+    const hbBody = document.getElementById("hb-body");
+    hbBody.innerHTML = "";
+    Object.keys(heartbeats)
+      .sort()
+      .forEach((name) => {
+        const hb = heartbeats[name];
+        const tr = document.createElement("tr");
+        tr.innerHTML =
+          "<td>" +
+          name +
+          "</td>" +
+          "<td>" +
+          (hb.last_ts || "-") +
+          "</td>" +
+          "<td>" +
+          (hb.msg || "") +
+          "</td>";
+        hbBody.appendChild(tr);
+      });
+
+    // Signals
+    const sigBody = document.getElementById("signals-body");
+    sigBody.innerHTML = "";
+    signals.slice(0, 20).forEach((s) => {
+      const tr = document.createElement("tr");
+      tr.innerHTML =
+        "<td>" +
+        (s.ts || "-") +
+        "</td>" +
+        "<td>" +
+        (s.symbol || "-") +
+        "</td>" +
+        "<td>" +
+        (s.signal || "-") +
+        "</td>" +
+        "<td>" +
+        (s.score != null ? s.score.toFixed(3) : "-") +
+        "</td>" +
+        "<td>" +
+        (s.model || "-") +
+        "</td>" +
+        "<td>" +
+        (s.source || "-") +
+        "</td>";
+      sigBody.appendChild(tr);
+    });
+
+    // Trades
+    document.getElementById("orders_total").textContent =
+      trades.orders_total || 0;
+    document.getElementById("exec_total").textContent =
+      trades.executions_total || 0;
+    const le = trades.last_execution || null;
+    const lastExecDiv = document.getElementById("last_exec");
+    if (le) {
+      lastExecDiv.textContent =
+        le.ts +
+        " | " +
+        le.symbol +
+        " " +
+        le.side +
+        " " +
+        le.fill_qty +
+        " @ " +
+        le.fill_price +
+        " (" +
+        le.status +
+        ")";
+    } else {
+      lastExecDiv.textContent = "暂无成交";
+    }
+
+    // Risk
+    document.getElementById("alerts_total").textContent =
+      risk.alerts_total || 0;
+    const la = risk.last_alert || null;
+    const lastAlertDiv = document.getElementById("last_alert");
+    if (la) {
+      lastAlertDiv.textContent =
+        la.ts +
+        " | " +
+        la.level +
+        " | " +
+        (la.symbol || "-") +
+        " | " +
+        (la.reason || "");
+    } else {
+      lastAlertDiv.textContent = "暂无风险告警";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // 初次渲染（后端带来的 snapshot）
+    try {
+      const initDataTag = document.getElementById("initial-snapshot");
+      if (initDataTag && initDataTag.textContent) {
+        const initData = JSON.parse(initDataTag.textContent);
+        renderStatus(initData);
+      }
+    } catch (e) {
+      console.warn("init snapshot parse failed", e);
+    }
+
+    // 每 3 秒拉一次 /api/status
+    fetchStatus();
+    setInterval(fetchStatus, 3000);
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="section">
+  <h2>系统概览</h2>
+  <div class="small mono">
+    时间：<span id="ts">-</span> |
+    Uptime：<span id="uptime">-</span> |
+    收到事件总数：<span id="events_total">0</span>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Topic 统计</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>Count</th>
+        <th>Last TS</th>
+        <th>Last Source</th>
+      </tr>
+    </thead>
+    <tbody id="topics-body"></tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>组件心跳</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Component</th>
+        <th>Last Heartbeat</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody id="hb-body"></tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>最近策略信号</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>时间</th>
+        <th>标的</th>
+        <th>Signal</th>
+        <th>Score</th>
+        <th>Model</th>
+        <th>Source</th>
+      </tr>
+    </thead>
+    <tbody id="signals-body"></tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>交易 & 风控</h2>
+  <p class="small">
+    订单总数：<span id="orders_total">0</span>，
+    成交总数：<span id="exec_total">0</span>
+  </p>
+  <p class="small">
+    最近一笔成交：<span id="last_exec" class="mono">-</span>
+  </p>
+  <p class="small">
+    风险告警总数：<span id="alerts_total">0</span>
+  </p>
+  <p class="small">
+    最近一条告警：<span id="last_alert" class="mono">-</span>
+  </p>
+</div>
+
+<!-- 后端初始 snapshot，供前端首屏渲染 -->
+<script id="initial-snapshot" type="application/json">
+{{ snapshot|tojson }}
+</script>
+{% endblock %}

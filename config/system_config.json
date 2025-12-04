@@ -1,0 +1,278 @@
+{
+  "version": "mk4-local-dev-safe-proxy-v1",
+
+  "env": "dev",
+  "timezone": "Asia/Shanghai",
+  "trading_calendar": "china_stock",
+
+  "paths": {
+    "project_root": ".",
+    "config_dir": "config",
+    "root_dir": ".",
+    "data_dir": "data",
+    "dataset_dir": "data/datasets",
+    "log_dir": "log",
+    "db_dir": "db",
+    "cache_dir": "cache",
+    "fig_dir": "figs",
+    "experiments_dir": "experiments",
+    "backup_dir": "backups"
+  },
+
+  "logging": {
+    "level": "INFO",
+    "log_to_file": true,
+    "log_file": "log/lighthunter.log",
+    "max_bytes": 10485760,
+    "backup_count": 5
+  },
+
+  "network": {
+    "default_timeout_sec": 8.0,
+    "max_retries": 3,
+    "backoff_factor": 0.3,
+
+    "ua_strategy": "per_session",
+    "ua_pool": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
+    ],
+
+    "proxies": {
+      "mode": "per_site",
+      "default": "direct",
+      "pool": [
+        {
+          "name": "direct",
+          "type": "direct"
+        },
+        {
+          "name": "v2ray_main",
+          "type": "http",
+          "http": "http://127.0.0.1:10808",
+          "https": "http://127.0.0.1:10808"
+        }
+      ]
+    },
+
+    "sites": {
+      "tx_quote": {
+        "base_urls": ["https://qt.gtimg.cn"],
+        "roles": ["quote", "snapshot"],
+        "primary": true,
+        "timeout_sec": 6.0,
+        "qps_limit": 5.0,
+        "max_concurrent": 2,
+        "proxy": "v2ray_main",
+        "retry": {
+          "max_retries": 2,
+          "backoff_factor": 0.3,
+          "retry_status_codes": [500, 502, 503, 504, 429],
+          "retry_on_timeout": true
+        },
+        "circuit_breaker": {
+          "error_rate_window": 300,
+          "error_rate_threshold": 0.4,
+          "cooldown_sec": 900
+        }
+      },
+
+      "sina_quote": {
+        "base_urls": ["https://hq.sinajs.cn"],
+        "roles": ["quote", "snapshot"],
+        "primary": false,
+        "timeout_sec": 6.0,
+        "qps_limit": 5.0,
+        "max_concurrent": 2,
+        "proxy": "v2ray_main",
+        "retry": {
+          "max_retries": 2,
+          "backoff_factor": 0.3,
+          "retry_status_codes": [500, 502, 503, 504, 429],
+          "retry_on_timeout": true
+        },
+        "circuit_breaker": {
+          "error_rate_window": 300,
+          "error_rate_threshold": 0.4,
+          "cooldown_sec": 900
+        }
+      },
+
+      "eastmoney_quote": {
+        "base_urls": ["https://push2.eastmoney.com"],
+        "roles": ["quote"],
+        "primary": false,
+        "timeout_sec": 8.0,
+        "qps_limit": 0.5,
+        "max_concurrent": 1,
+        "proxy": "v2ray_main",
+        "retry": {
+          "max_retries": 1,
+          "backoff_factor": 0.5,
+          "retry_status_codes": [500, 502, 503, 504, 429],
+          "retry_on_timeout": true
+        },
+        "circuit_breaker": {
+          "error_rate_window": 600,
+          "error_rate_threshold": 0.4,
+          "cooldown_sec": 900
+        }
+      },
+
+      "ths_quote": {
+        "base_urls": ["https://basic.10jqka.com.cn"],
+        "roles": ["kline"],
+        "primary": false,
+        "timeout_sec": 10.0,
+        "qps_limit": 0.3,
+        "max_concurrent": 1,
+        "proxy": "v2ray_main",
+        "retry": {
+          "max_retries": 1,
+          "backoff_factor": 0.5,
+          "retry_status_codes": [500, 502, 503, 504, 429],
+          "retry_on_timeout": true
+        },
+        "circuit_breaker": {
+          "error_rate_window": 600,
+          "error_rate_threshold": 0.4,
+          "cooldown_sec": 900
+        }
+      }
+    }
+  },
+
+  "request_engine": {
+    "default_site": "tx_quote",
+    "default_timeout_sec": 8.0
+  },
+
+  "data_sources": {
+    "snapshot_tx": {
+      "site": "tx_quote",
+      "role": "snapshot",
+      "primary": true,
+      "weight": 1.0
+    },
+    "snapshot_sina": {
+      "site": "sina_quote",
+      "role": "snapshot",
+      "primary": false,
+      "weight": 0.9
+    },
+    "snapshot_eastmoney": {
+      "site": "eastmoney_quote",
+      "role": "snapshot",
+      "primary": false,
+      "weight": 0.8
+    },
+
+    "snapshot_primary": {
+      "role": "aggregate",
+      "primary": true,
+      "sources": ["snapshot_tx", "snapshot_eastmoney", "snapshot_sina"]
+    },
+
+    "daily_kline_ths": {
+      "site": "ths_quote",
+      "role": "daily_kline",
+      "primary": true
+    }
+  },
+
+  "event_bus": {
+    "enabled": true,
+    "zmq": {
+      "pub_endpoint": "tcp://127.0.0.1:5555",
+      "sub_endpoint": "tcp://127.0.0.1:5555",
+      "pub_mode": "bind",
+      "sub_mode": "connect"
+    },
+    "topics": {
+      "market_ts": "market.ts",
+      "alpha_signal": "alpha.signal",
+      "order": "order",
+      "execution": "execution"
+    }
+  },
+
+  "storage": {
+    "ts": {
+      "driver": "sqlite",
+      "db_path": "data/ts/market_ts.db"
+    }
+  },
+
+  "duckdb": {
+    "path": "data/duckdb/lighthunter.duckdb",
+    "read_only": false
+  },
+
+  "collector": {
+    "ts": {
+      "enabled": true,
+      "interval_sec": 60,
+      "universe_key": "ultrashort_main"
+    }
+  },
+
+  "alpha": {
+    "default_job": "ultrashort_main"
+  },
+
+  "trade_core": {
+    "starting_cash": 1000000.0,
+    "trading_cost_bps": 2.0
+  },
+
+  "broker": {
+    "type": "paper",
+    "paper": {
+      "starting_cash": 1000000.0,
+      "base_currency": "CNY",
+      "commission_bps": 2.0,
+      "slippage_bps": 5.0
+    }
+  },
+
+  "portfolio": {
+    "accounts": {
+      "paper_main": {
+        "broker": "paper",
+        "base_currency": "CNY",
+        "starting_cash": 1000000.0
+      }
+    },
+    "strategies": {
+      "ultrashort_main": {
+        "account": "paper_main",
+        "style": "intraday_ultrashort",
+        "description": "A股超短线主策略 - U2 (回测/研究用)"
+      }
+    }
+  },
+
+  "jobs": {
+    "ultrashort_main": {
+      "description": "A股超短线 U2 主策略 - 回测任务",
+      "dataset_dir": "data/datasets/ultrashort_main",
+      "alpha_table": "alpha_daily_signals",
+      "label_table": "labels_daily",
+      "universe_file": "config/universe_ultrashort.txt"
+    }
+  },
+
+  "ops": {
+    "night_ops": {
+      "enabled": true,
+      "default_mode": "full"
+    }
+  },
+
+  "backup": {
+    "enabled": true,
+    "dir": "backups",
+    "days_to_keep": 30
+  }
+}

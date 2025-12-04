@@ -1,0 +1,33 @@
+{
+  "version": "Mk-AIConfig R20-U2",
+  "sequence_brain": {
+    "model_type": "lstm",
+    "hidden_size": 128,
+    "num_layers": 2
+  },
+  "combat_brain": {
+    "mlp_hidden": [128, 64]
+  },
+  "u2_daily": {
+    "db_path": "market_ts.db",
+
+    "min_price": 3.0,
+    "max_price": 60.0,
+
+    "min_turnover_rate": 5.0,
+    "max_turnover_rate": 45.0,
+
+    "min_amount": 80000000.0,
+    "min_float_mkt": 1500000000.0,
+    "max_float_mkt": 150000000000.0,
+
+    "exclude_st": true,
+    "exclude_kcb": true,
+    "exclude_bj": true,
+
+    "top_k": 60,
+    "score_floor": 0.0,
+
+    "output_dir": "reports/u2_candidates"
+  }
+}

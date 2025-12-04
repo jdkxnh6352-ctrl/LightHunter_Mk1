@@ -1,0 +1,162 @@
+2025-11-30 02:50:30 [INFO] [U2DailyScoringBacktest] 读取数据集：data/datasets\ultrashort_main.parquet
+2025-11-30 02:50:30 [INFO] [U2DailyScoringBacktest] 回测日期区间：2020-02-07 ~ 2025-10-31（数据全体区间：2020-02-07 ~ 2025-10-31）
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-10 可用训练天数仅有 1，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-11 可用训练天数仅有 2，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-12 可用训练天数仅有 3，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-13 可用训练天数仅有 4，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-14 可用训练天数仅有 5，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-17 可用训练天数仅有 6，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-18 可用训练天数仅有 7，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-19 可用训练天数仅有 8，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-20 可用训练天数仅有 9，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-21 可用训练天数仅有 10，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-24 可用训练天数仅有 11，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-25 可用训练天数仅有 12，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-26 可用训练天数仅有 13，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-27 可用训练天数仅有 14，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-28 可用训练天数仅有 15，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-02 可用训练天数仅有 16，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-03 可用训练天数仅有 17，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-04 可用训练天数仅有 18，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-05 可用训练天数仅有 19，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-06 可用训练天数仅有 20，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-09 可用训练天数仅有 21，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-10 可用训练天数仅有 22，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-11 可用训练天数仅有 23，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-12 可用训练天数仅有 24，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-13 可用训练天数仅有 25，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-16 可用训练天数仅有 26，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-17 可用训练天数仅有 27，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-18 可用训练天数仅有 28，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-19 可用训练天数仅有 29，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-20 可用训练天数仅有 30，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-23 可用训练天数仅有 31，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-24 可用训练天数仅有 32，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-25 可用训练天数仅有 33，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-26 可用训练天数仅有 34，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-27 可用训练天数仅有 35，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-30 可用训练天数仅有 36，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-31 可用训练天数仅有 37，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-01 可用训练天数仅有 38，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-02 可用训练天数仅有 39，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-03 可用训练天数仅有 40，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-07 可用训练天数仅有 41，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-08 可用训练天数仅有 42，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-09 可用训练天数仅有 43，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-10 可用训练天数仅有 44，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-13 可用训练天数仅有 45，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-14 可用训练天数仅有 46，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-15 可用训练天数仅有 47，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-16 可用训练天数仅有 48，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-17 可用训练天数仅有 49，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-20 可用训练天数仅有 50，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-21 可用训练天数仅有 51，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-22 可用训练天数仅有 52，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-23 可用训练天数仅有 53，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-24 可用训练天数仅有 54，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-27 可用训练天数仅有 55，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-28 可用训练天数仅有 56，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-29 可用训练天数仅有 57，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-30 可用训练天数仅有 58，略过该日打分。
+2025-11-30 02:50:30 [WARNING] [U2DailyScoringBacktest] 交易日 2020-05-06 可用训练天数仅有 59，略过该日打分。
+2025-11-30 02:51:36 [INFO] [U2DailyScoringBacktest] [U2 Backtest] 总体统计：交易日数=1332, 样本数=5328, 命中率(label_u2=1 比例)=0.8829
+2025-11-30 02:51:36 [INFO] [U2DailyScoringBacktest] [U2 Backtest] 按年份统计：
+ year  n_days  n_samples  hit_rate
+ 2020     163        652    0.9325
+ 2021     243        972    0.9074
+ 2022     242        968    0.8946
+ 2023     242        968    0.8884
+ 2024     242        968    0.8636
+ 2025     200        800    0.8150
+2025-11-30 02:51:36 [INFO] [U2DailyScoringBacktest] 候选股明细已写入：reports\u2_daily_scoring_backtest_ultrashort_main.csv
+2025-11-30 03:07:56 [INFO] [U2DailyScoringBacktest] 读取数据集：data/datasets\ultrashort_main.parquet
+2025-11-30 03:07:56 [INFO] [U2DailyScoringBacktest] 回测日期区间：2020-07-01 ~ 2025-10-31（数据全体区间：2020-02-07 ~ 2025-10-31）
+2025-11-30 03:07:58 [INFO] [U2DailyScoringBacktest] 交易日 2020-07-01 过滤后没有任何候选股。
+2025-11-30 03:08:00 [INFO] [U2DailyScoringBacktest] 交易日 2020-07-06 过滤后没有任何候选股。
+2025-11-30 03:08:01 [INFO] [U2DailyScoringBacktest] 交易日 2020-07-07 过滤后没有任何候选股。
+2025-11-30 03:08:02 [INFO] [U2DailyScoringBacktest] 交易日 2020-07-08 过滤后没有任何候选股。
+2025-11-30 03:08:03 [INFO] [U2DailyScoringBacktest] 交易日 2020-07-09 过滤后没有任何候选股。
+2025-11-30 03:08:20 [INFO] [U2DailyScoringBacktest] 交易日 2020-08-14 过滤后没有任何候选股。
+2025-11-30 03:08:21 [INFO] [U2DailyScoringBacktest] 交易日 2020-09-18 过滤后没有任何候选股。
+2025-11-30 03:08:21 [INFO] [U2DailyScoringBacktest] 交易日 2020-10-12 过滤后没有任何候选股。
+2025-11-30 03:08:21 [INFO] [U2DailyScoringBacktest] 交易日 2020-10-13 过滤后没有任何候选股。
+2025-11-30 03:08:21 [INFO] [U2DailyScoringBacktest] 交易日 2020-10-14 过滤后没有任何候选股。
+2025-11-30 03:08:21 [INFO] [U2DailyScoringBacktest] 交易日 2020-10-15 过滤后没有任何候选股。
+2025-11-30 03:08:22 [INFO] [U2DailyScoringBacktest] 交易日 2020-11-09 过滤后没有任何候选股。
+2025-11-30 03:08:23 [INFO] [U2DailyScoringBacktest] 交易日 2020-12-31 过滤后没有任何候选股。
+2025-11-30 03:08:23 [INFO] [U2DailyScoringBacktest] 交易日 2021-01-06 过滤后没有任何候选股。
+2025-11-30 03:08:23 [INFO] [U2DailyScoringBacktest] 交易日 2021-01-07 过滤后没有任何候选股。
+2025-11-30 03:08:23 [INFO] [U2DailyScoringBacktest] 交易日 2021-01-12 过滤后没有任何候选股。
+2025-11-30 03:08:23 [INFO] [U2DailyScoringBacktest] 交易日 2021-01-21 过滤后没有任何候选股。
+2025-11-30 03:08:26 [INFO] [U2DailyScoringBacktest] 交易日 2021-05-18 过滤后没有任何候选股。
+2025-11-30 03:08:26 [INFO] [U2DailyScoringBacktest] 交易日 2021-05-20 过滤后没有任何候选股。
+2025-11-30 03:08:26 [INFO] [U2DailyScoringBacktest] 交易日 2021-05-25 过滤后没有任何候选股。
+2025-11-30 03:08:26 [INFO] [U2DailyScoringBacktest] 交易日 2021-05-26 过滤后没有任何候选股。
+2025-11-30 03:08:26 [INFO] [U2DailyScoringBacktest] 交易日 2021-05-28 过滤后没有任何候选股。
+2025-11-30 03:08:27 [INFO] [U2DailyScoringBacktest] 交易日 2021-06-22 过滤后没有任何候选股。
+2025-11-30 03:08:29 [INFO] [U2DailyScoringBacktest] 交易日 2021-10-26 过滤后没有任何候选股。
+2025-11-30 03:08:30 [INFO] [U2DailyScoringBacktest] 交易日 2021-10-28 过滤后没有任何候选股。
+2025-11-30 03:08:30 [INFO] [U2DailyScoringBacktest] 交易日 2021-10-29 过滤后没有任何候选股。
+2025-11-30 03:08:32 [INFO] [U2DailyScoringBacktest] 交易日 2022-02-11 过滤后没有任何候选股。
+2025-11-30 03:08:35 [INFO] [U2DailyScoringBacktest] 交易日 2022-06-14 过滤后没有任何候选股。
+2025-11-30 03:08:35 [INFO] [U2DailyScoringBacktest] 交易日 2022-06-15 过滤后没有任何候选股。
+2025-11-30 03:08:35 [INFO] [U2DailyScoringBacktest] 交易日 2022-06-27 过滤后没有任何候选股。
+2025-11-30 03:08:35 [INFO] [U2DailyScoringBacktest] 交易日 2022-06-28 过滤后没有任何候选股。
+2025-11-30 03:08:35 [INFO] [U2DailyScoringBacktest] 交易日 2022-07-04 过滤后没有任何候选股。
+2025-11-30 03:08:35 [INFO] [U2DailyScoringBacktest] 交易日 2022-07-05 过滤后没有任何候选股。
+2025-11-30 03:08:38 [INFO] [U2DailyScoringBacktest] 交易日 2022-11-04 过滤后没有任何候选股。
+2025-11-30 03:08:38 [INFO] [U2DailyScoringBacktest] 交易日 2022-11-11 过滤后没有任何候选股。
+2025-11-30 03:08:38 [INFO] [U2DailyScoringBacktest] 交易日 2022-11-15 过滤后没有任何候选股。
+2025-11-30 03:08:40 [INFO] [U2DailyScoringBacktest] 交易日 2023-01-03 过滤后没有任何候选股。
+2025-11-30 03:08:40 [INFO] [U2DailyScoringBacktest] 交易日 2023-01-05 过滤后没有任何候选股。
+2025-11-30 03:08:40 [INFO] [U2DailyScoringBacktest] 交易日 2023-01-16 过滤后没有任何候选股。
+2025-11-30 03:08:40 [INFO] [U2DailyScoringBacktest] 交易日 2023-01-17 过滤后没有任何候选股。
+2025-11-30 03:08:40 [INFO] [U2DailyScoringBacktest] 交易日 2023-01-18 过滤后没有任何候选股。
+2025-11-30 03:08:40 [INFO] [U2DailyScoringBacktest] 交易日 2023-01-19 过滤后没有任何候选股。
+2025-11-30 03:08:40 [INFO] [U2DailyScoringBacktest] 交易日 2023-01-20 过滤后没有任何候选股。
+2025-11-30 03:08:40 [INFO] [U2DailyScoringBacktest] 交易日 2023-01-30 过滤后没有任何候选股。
+2025-11-30 03:08:40 [INFO] [U2DailyScoringBacktest] 交易日 2023-01-31 过滤后没有任何候选股。
+2025-11-30 03:08:48 [INFO] [U2DailyScoringBacktest] 交易日 2024-02-08 过滤后没有任何候选股。
+2025-11-30 03:08:48 [INFO] [U2DailyScoringBacktest] 交易日 2024-02-19 过滤后没有任何候选股。
+2025-11-30 03:08:48 [INFO] [U2DailyScoringBacktest] 交易日 2024-02-20 过滤后没有任何候选股。
+2025-11-30 03:08:49 [INFO] [U2DailyScoringBacktest] 交易日 2024-02-21 过滤后没有任何候选股。
+2025-11-30 03:08:49 [INFO] [U2DailyScoringBacktest] 交易日 2024-02-22 过滤后没有任何候选股。
+2025-11-30 03:08:49 [INFO] [U2DailyScoringBacktest] 交易日 2024-02-23 过滤后没有任何候选股。
+2025-11-30 03:08:49 [INFO] [U2DailyScoringBacktest] 交易日 2024-02-27 过滤后没有任何候选股。
+2025-11-30 03:08:53 [INFO] [U2DailyScoringBacktest] 交易日 2024-09-24 过滤后没有任何候选股。
+2025-11-30 03:08:53 [INFO] [U2DailyScoringBacktest] 交易日 2024-09-25 过滤后没有任何候选股。
+2025-11-30 03:08:53 [INFO] [U2DailyScoringBacktest] 交易日 2024-09-26 过滤后没有任何候选股。
+2025-11-30 03:08:53 [INFO] [U2DailyScoringBacktest] 交易日 2024-09-27 过滤后没有任何候选股。
+2025-11-30 03:08:53 [INFO] [U2DailyScoringBacktest] 交易日 2024-09-30 过滤后没有任何候选股。
+2025-11-30 03:08:53 [INFO] [U2DailyScoringBacktest] 交易日 2024-10-08 过滤后没有任何候选股。
+2025-11-30 03:08:58 [INFO] [U2DailyScoringBacktest] 交易日 2025-05-08 过滤后没有任何候选股。
+2025-11-30 03:08:58 [INFO] [U2DailyScoringBacktest] 交易日 2025-05-09 过滤后没有任何候选股。
+2025-11-30 03:08:58 [INFO] [U2DailyScoringBacktest] 交易日 2025-05-12 过滤后没有任何候选股。
+2025-11-30 03:08:58 [INFO] [U2DailyScoringBacktest] 交易日 2025-05-13 过滤后没有任何候选股。
+2025-11-30 03:08:58 [INFO] [U2DailyScoringBacktest] 交易日 2025-05-14 过滤后没有任何候选股。
+2025-11-30 03:08:58 [INFO] [U2DailyScoringBacktest] 交易日 2025-05-16 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-05-19 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-05-20 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-05-22 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-05-29 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-06-03 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-06-04 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-06-05 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-06-06 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-06-09 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-06-25 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-06-27 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-06-30 过滤后没有任何候选股。
+2025-11-30 03:08:59 [INFO] [U2DailyScoringBacktest] 交易日 2025-07-01 过滤后没有任何候选股。
+2025-11-30 03:09:01 [INFO] [U2DailyScoringBacktest] 交易日 2025-08-25 过滤后没有任何候选股。
+2025-11-30 03:09:01 [INFO] [U2DailyScoringBacktest] 交易日 2025-08-26 过滤后没有任何候选股。
+2025-11-30 03:09:02 [INFO] [U2DailyScoringBacktest] [U2 Backtest] 总体统计：交易日数=1216, 样本数=2455, 命中率(label_u2=1 比例)=0.9845
+2025-11-30 03:09:02 [INFO] [U2DailyScoringBacktest] [U2 Backtest] 按年份统计：
+ year  n_days  n_samples  hit_rate
+ 2020     113        244    0.9836
+ 2021     230        446    0.9865
+ 2022     232        459    0.9891
+ 2023     233        483    0.9855
+ 2024     229        483    0.9855
+ 2025     179        340    0.9735
+2025-11-30 03:09:02 [INFO] [U2DailyScoringBacktest] 候选股明细已写入：reports/u2_daily_backtest_demo.csv

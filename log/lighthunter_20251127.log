@@ -1,0 +1,44 @@
+2025-11-27 21:02:20 [INFO] [__main__] ========================================================================
+2025-11-27 21:02:20 [INFO] [__main__] LightHunter Mk3 回归测试结果汇总
+2025-11-27 21:02:20 [INFO] [__main__] ------------------------------------------------------------------------
+2025-11-27 21:02:20 [INFO] [__main__] CHECK          | STATUS | CRT | MESSAGE
+2025-11-27 21:02:20 [INFO] [__main__] ------------------------------------------------------
+2025-11-27 21:02:20 [INFO] [__main__] config_paths   | FAIL   | C   | paths 中缺少关键字段: ['data_root', 'factors_dir', 'datasets_dir']
+2025-11-27 21:02:20 [INFO] [__main__] duckdb_storage | OK     | C   | DuckDB 可写入可查询，路径: data/lighthunter.duckdb
+2025-11-27 21:02:20 [INFO] [__main__] event_bus      | FAIL   | N   | 未找到 ZmqBus（bus.zmq_bus），跳过事件总线检查: cannot import name 'ZmqBus' from 'bus.zmq_bus' (G:\LightHunter_Mk1\bus\zmq_bus.py)
+2025-11-27 21:02:20 [INFO] [__main__] experiment_lab | FAIL   | N   | ExperimentLab 检查失败：建议检查实验目录配置及权限: 'ExperimentLab' object has no attribute 'log_experiment'
+2025-11-27 21:02:20 [ERROR] [__main__] 共有 1 项 critical 检查失败，建议立即排查后再上线。
+2025-11-27 21:02:20 [INFO] [__main__] ========================================================================
+2025-11-27 21:42:05 [INFO] [__main__] ========================================================================
+2025-11-27 21:42:05 [INFO] [__main__] LightHunter Mk3 回归测试结果汇总
+2025-11-27 21:42:05 [INFO] [__main__] ------------------------------------------------------------------------
+2025-11-27 21:42:05 [INFO] [__main__] CHECK          | STATUS | CRT | MESSAGE
+2025-11-27 21:42:05 [INFO] [__main__] ------------------------------------------------------
+2025-11-27 21:42:05 [INFO] [__main__] config_paths   | OK     | C   | config_center & paths 检查通过
+2025-11-27 21:42:05 [INFO] [__main__] duckdb_storage | OK     | C   | DuckDB 可写入可查询，路径: data/duckdb/lighthunter.duckdb
+2025-11-27 21:42:05 [INFO] [__main__] event_bus      | FAIL   | N   | 未找到 ZmqBus（bus.zmq_bus），跳过事件总线检查: cannot import name 'ZmqBus' from 'bus.zmq_bus' (G:\LightHunter_Mk1\bus\zmq_bus.py)
+2025-11-27 21:42:05 [INFO] [__main__] experiment_lab | FAIL   | N   | ExperimentLab 检查失败：建议检查实验目录配置及权限: 'ExperimentLab' object has no attribute 'log_experiment'
+2025-11-27 21:42:05 [INFO] [__main__] 所有 critical 检查均已通过。
+2025-11-27 21:42:05 [INFO] [__main__] ========================================================================
+2025-11-27 21:42:43 [INFO] [__main__] ========================================================================
+2025-11-27 21:42:43 [INFO] [__main__] LightHunter Mk3 回归测试结果汇总
+2025-11-27 21:42:43 [INFO] [__main__] ------------------------------------------------------------------------
+2025-11-27 21:42:43 [INFO] [__main__] CHECK          | STATUS | CRT | MESSAGE
+2025-11-27 21:42:43 [INFO] [__main__] ------------------------------------------------------
+2025-11-27 21:42:43 [INFO] [__main__] config_paths   | OK     | C   | config_center & paths 检查通过
+2025-11-27 21:42:43 [INFO] [__main__] duckdb_storage | OK     | C   | DuckDB 可写入可查询，路径: data/duckdb/lighthunter.duckdb
+2025-11-27 21:42:43 [INFO] [__main__] event_bus      | FAIL   | N   | 未找到 ZmqBus（bus.zmq_bus），跳过事件总线检查: cannot import name 'ZmqBus' from 'bus.zmq_bus' (G:\LightHunter_Mk1\bus\zmq_bus.py)
+2025-11-27 21:42:43 [INFO] [__main__] experiment_lab | FAIL   | N   | ExperimentLab 检查失败：建议检查实验目录配置及权限: 'ExperimentLab' object has no attribute 'log_experiment'
+2025-11-27 21:42:43 [INFO] [__main__] 所有 critical 检查均已通过。
+2025-11-27 21:42:43 [INFO] [__main__] ========================================================================
+2025-11-27 22:04:02 [INFO] [__main__] ========================================================================
+2025-11-27 22:04:02 [INFO] [__main__] LightHunter Mk3 回归测试结果汇总
+2025-11-27 22:04:02 [INFO] [__main__] ------------------------------------------------------------------------
+2025-11-27 22:04:02 [INFO] [__main__] CHECK          | STATUS | CRT | MESSAGE
+2025-11-27 22:04:02 [INFO] [__main__] ------------------------------------------------------
+2025-11-27 22:04:02 [INFO] [__main__] config_paths   | OK     | C   | config_center & paths 检查通过
+2025-11-27 22:04:02 [INFO] [__main__] duckdb_storage | OK     | C   | DuckDB 可写入可查询，路径: data/duckdb/lighthunter.duckdb
+2025-11-27 22:04:02 [INFO] [__main__] event_bus      | FAIL   | N   | 未找到 ZmqBus（bus.zmq_bus），跳过事件总线检查: cannot import name 'ZmqBus' from 'bus.zmq_bus' (G:\LightHunter_Mk1\bus\zmq_bus.py)
+2025-11-27 22:04:02 [INFO] [__main__] experiment_lab | FAIL   | N   | ExperimentLab 检查失败：建议检查实验目录配置及权限: 'ExperimentLab' object has no attribute 'log_experiment'
+2025-11-27 22:04:02 [INFO] [__main__] 所有 critical 检查均已通过。
+2025-11-27 22:04:02 [INFO] [__main__] ========================================================================

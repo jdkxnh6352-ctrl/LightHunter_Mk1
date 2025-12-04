@@ -1,0 +1,364 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{# -------------------- 战役监控总览（来自 MonitorDaemon.state.json） -------------------- #}
+{% set summary = monitor_summary or {} %}
+{% set latency = summary.get('latency', {}) %}
+{% set errors = summary.get('errors', {}) %}
+{% set queues = summary.get('bus_queues', {}) %}
+
+<div class="card" style="margin-bottom: 16px;">
+  <div class="card-header">
+    <div class="card-title">Campaign Monitor · 战役监控总览</div>
+    <div class="card-subtitle">
+      最近汇总时间：{{ summary.get('ts', '无数据') }}
+    </div>
+  </div>
+
+  {% if summary %}
+  <div class="small">
+    <div class="flex-between" style="margin-bottom: 8px;">
+      <div class="muted">
+        延迟监控 Topic 数：{{ latency|length }}，
+        队列端点数：{{ queues|length }}，
+        组件错误源：{{ errors|length }}
+      </div>
+    </div>
+    <div class="grid" style="grid-template-columns: 2fr 1.5fr 1.5fr; grid-gap: 12px;">
+      <div>
+        <div class="card-subtitle">关键 Topic 延迟 (EWMA, ms)</div>
+        {% if latency %}
+        <table>
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>EWMA</th>
+              <th>Max</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for topic, st in latency.items()|list[:5] %}
+            <tr>
+              <td class="small mono">{{ topic }}</td>
+              <td class="small">
+                {{ '%.1f'|format(st.ewma_latency_ms if st.ewma_latency_ms is defined else st.get('ewma_latency_ms', 0.0)) }}
+              </td>
+              <td class="small">
+                {{ '%.1f'|format(st.max_latency_ms if st.max_latency_ms is defined else st.get('max_latency_ms', 0.0)) }}
+              </td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+          <div class="muted small">暂无延迟数据。</div>
+        {% endif %}
+      </div>
+
+      <div>
+        <div class="card-subtitle">ZeroMQ 队列堆积</div>
+        {% if queues %}
+        <table>
+          <thead>
+            <tr>
+              <th>Endpoint</th>
+              <th>In</th>
+              <th>Out</th>
+              <th>Drop</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for ep, st in queues.items()|list[:5] %}
+            <tr>
+              <td class="small mono">{{ ep }}</td>
+              <td class="small">{{ st.in_queue if st.in_queue is defined else st.get('in_queue', 0) }}</td>
+              <td class="small">{{ st.out_queue if st.out_queue is defined else st.get('out_queue', 0) }}</td>
+              <td class="small">{{ st.dropped if st.dropped is defined else st.get('dropped', 0) }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+          <div class="muted small">暂无队列指标。</div>
+        {% endif %}
+      </div>
+
+      <div>
+        <div class="card-subtitle">组件错误计数</div>
+        {% if errors %}
+        <table>
+          <thead>
+            <tr>
+              <th>组件</th>
+              <th>错误数</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for comp, st in errors.items()|list[:6] %}
+            {% set cnt = st.count if st.count is defined else st.get('count', 0) %}
+            <tr>
+              <td class="small mono">{{ comp }}</td>
+              <td class="small {% if cnt > 0 %}alert-level-warning{% endif %}">{{ cnt }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+          <div class="muted small">暂无错误记录。</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% else %}
+    <div class="muted small">尚未生成战役监控 summary，可先启动 MonitorDaemon。</div>
+  {% endif %}
+</div>
+
+
+{# -------------------- 原有布局：左侧账户+实验，右侧风险 -------------------- #}
+<div class="grid">
+  <!-- 左侧：账户 + 实验 -->
+  <div class="col">
+
+    <!-- 账户净值 / 持仓 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Accounts · 账户净值与持仓</div>
+        <div class="card-subtitle">
+          共 {{ dashboard.accounts|length }} 个账户
+        </div>
+      </div>
+
+      {% if dashboard.accounts %}
+      <div class="scroll-y">
+        <table>
+          <thead>
+            <tr>
+              <th>账户</th>
+              <th class="nowrap">净值</th>
+              <th class="nowrap">总回撤</th>
+              <th class="nowrap">日内回撤</th>
+              <th class="nowrap">仓位</th>
+              <th class="nowrap">单票上限</th>
+              <th class="nowrap">风险</th>
+              <th>持仓概览</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for acct in dashboard.accounts %}
+            {% set level = acct.risk_level or 'normal' %}
+            {% if level == 'critical' %}
+              {% set chip_class = 'chip chip-danger' %}
+            {% elif level == 'warning' %}
+              {% set chip_class = 'chip chip-warn' %}
+            {% else %}
+              {% set chip_class = 'chip chip-ok' %}
+            {% endif %}
+
+            <tr>
+              <td class="mono">{{ acct.account_id }}</td>
+              <td class="mono nowrap">{{ "%.0f"|format(acct.nav) }}</td>
+              <td class="nowrap">{{ "%.2f"|format(acct.dd_total * 100) }}%</td>
+              <td class="nowrap">{{ "%.2f"|format(acct.dd_intraday * 100) }}%</td>
+              <td class="nowrap">{{ "%.2f"|format(acct.gross_exposure) }}</td>
+              <td class="nowrap">{{ "%.2f"|format(acct.max_single_weight * 100) }}%</td>
+              <td>
+                <span class="{{ chip_class }}">
+                  {{ "%.2f"|format(acct.risk_score) }} · {{ level }}
+                </span>
+              </td>
+              <td>
+                {% if acct.positions %}
+                  {% for sym, w in acct.positions.items() %}
+                    {% if loop.index0 < 4 %}
+                      <span class="tag mono">{{ sym }} {{ "%.1f"|format(w*100) }}%</span>
+                    {% elif loop.index0 == 4 %}
+                      <span class="muted small">+{{ acct.positions|length - 4 }} more</span>
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+                {% else %}
+                  <span class="muted small">暂无持仓数据</span>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+        <div class="muted small">暂无账户数据。</div>
+      {% endif %}
+    </div>
+
+    <!-- 最近实验结果 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Experiments · 实验矩阵</div>
+        <div class="card-subtitle">
+          最近 {{ dashboard.experiments|length }} 次实验
+        </div>
+      </div>
+
+      {% if dashboard.experiments %}
+      <div class="scroll-y">
+        <table>
+          <thead>
+            <tr>
+              <th>实验 ID</th>
+              <th>模型</th>
+              <th>任务</th>
+              <th>状态</th>
+              <th>关键指标</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for exp in dashboard.experiments %}
+            {% set status = exp.status|lower %}
+            {% if status in ['done', 'success'] %}
+              {% set cls = 'chip chip-ok' %}
+            {% elif status in ['running'] %}
+              {% set cls = 'chip chip-warn' %}
+            {% elif status in ['failed', 'error'] %}
+              {% set cls = 'chip chip-danger' %}
+            {% else %}
+              {% set cls = 'chip chip-ok' %}
+            {% endif %}
+
+            {% set m = exp.metrics or {} %}
+            <tr>
+              <td class="mono">{{ exp.experiment_id }}</td>
+              <td class="mono small">{{ exp.model_id or '-' }}</td>
+              <td class="small">{{ exp.task_type or '-' }}</td>
+              <td><span class="{{ cls }}">{{ status or 'unknown' }}</span></td>
+              <td class="small mono">
+                {% if m %}
+                  {% if m.sharpe is defined %}
+                    Sharpe={{ "%.2f"|format(m.sharpe) }}
+                  {% endif %}
+                  {% if m.ic is defined %}
+                    , IC={{ "%.3f"|format(m.ic) }}
+                  {% endif %}
+                  {% if m.ret_ann is defined %}
+                    , AnnRet={{ "%.2f"|format(m.ret_ann*100) }}%
+                  {% endif %}
+                  {% if m.max_dd is defined %}
+                    , MaxDD={{ "%.2f"|format(m.max_dd*100) }}%
+                  {% endif %}
+                {% else %}
+                  <span class="muted">无指标</span>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+        <div class="muted small">暂无实验记录，请先通过 NightOps/训练流水线运行实验。</div>
+      {% endif %}
+    </div>
+
+  </div>
+
+  <!-- 右侧：风险告警 -->
+  <div class="col">
+
+    <!-- Top 风险标的 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Top Risky Symbols · 高风险标的</div>
+        <div class="card-subtitle">
+          按最新风险评分排序
+        </div>
+      </div>
+
+      {% if dashboard.symbols %}
+      <div class="scroll-y">
+        <table>
+          <thead>
+            <tr>
+              <th>账户</th>
+              <th>标的</th>
+              <th>风险</th>
+              <th>告警次数</th>
+              <th>最近时间</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for s in dashboard.symbols %}
+            {% set level = s.level or 'normal' %}
+            {% if level == 'critical' %}
+              {% set chip_class = 'chip chip-danger' %}
+            {% elif level == 'warning' %}
+              {% set chip_class = 'chip chip-warn' %}
+            {% else %}
+              {% set chip_class = 'chip chip-ok' %}
+            {% endif %}
+            <tr>
+              <td class="mono small">{{ s.account_id }}</td>
+              <td class="mono small">{{ s.symbol }}</td>
+              <td><span class="{{ chip_class }}">{{ "%.2f"|format(s.score) }} · {{ level }}</span></td>
+              <td class="small">{{ s.alert_count }}</td>
+              <td class="small muted">{{ s.last_ts }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+        <div class="muted small">暂无标的风险数据。</div>
+      {% endif %}
+    </div>
+
+    <!-- 告警流 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Risk Alerts · 风险告警流</div>
+        <div class="card-subtitle">
+          最近 {{ dashboard.alerts|length }} 条
+        </div>
+      </div>
+
+      {% if dashboard.alerts %}
+      <div class="scroll-y small mono">
+        {% for a in dashboard.alerts %}
+          {% set cls = 'alert-level-info' %}
+          {% if a.level == 'warning' %}
+            {% set cls = 'alert-level-warning' %}
+          {% elif a.level == 'critical' %}
+            {% set cls = 'alert-level-critical' %}
+          {% endif %}
+          <div style="margin-bottom:4px;">
+            <span class="muted">{{ a.ts }}</span>
+            <span class="{{ cls }}">[{{ a.level }}]</span>
+            {% if a.scope == 'account' %}
+              <span>[ACCT {{ a.account_id }}]</span>
+            {% elif a.scope == 'symbol' %}
+              <span>[{{ a.account_id }} / {{ a.symbol }}]</span>
+            {% endif %}
+            <span>{{ a.message }}</span>
+          </div>
+        {% endfor %}
+      </div>
+      {% else %}
+        <div class="muted small">暂无风险告警。</div>
+      {% endif %}
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  function markRefreshed() {
+    const el = document.getElementById('hud-refresh');
+    if (!el) return;
+    const now = new Date();
+    el.textContent = now.toLocaleTimeString('zh-CN', { hour12: false });
+  }
+  markRefreshed();
+</script>
+{% endblock %}

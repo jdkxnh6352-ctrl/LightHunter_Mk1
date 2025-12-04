@@ -1,0 +1,45 @@
+{
+    "generated_at": "2025-11-28 16:15:40",
+    "total_error_lines": 14,
+    "stats": {
+        "total_error_lines": 14,
+        "by_type": {
+            "OTHER_ERROR": 14
+        },
+        "by_site": {
+            "OTHER": 14
+        },
+        "by_module": {
+            "Unknown": 14
+        },
+        "type_site_matrix": {
+            "OTHER": {
+                "OTHER_ERROR": 14
+            }
+        }
+    },
+    "site_defense": {
+        "OTHER": {
+            "risk_level": "low",
+            "total_errors": 14,
+            "error_profile": {
+                "OTHER_ERROR": 100.0
+            },
+            "suggested": {
+                "max_concurrency": 8,
+                "max_retries": 3,
+                "cooldown_sec": 0.3
+            }
+        }
+    },
+    "top_error_examples": {
+        "OTHER_ERROR": [
+            "2025-11-27 21:02:20 [INFO] [__main__] experiment_lab | FAIL   | N   | ExperimentLab 检查失败：建议检查实验目录配置及权限: 'ExperimentLab' object has no attribute 'log_experiment'",
+            "2025-11-27 21:02:20 [ERROR] [__main__] 共有 1 项 critical 检查失败，建议立即排查后再上线。",
+            "2025-11-27 21:42:05 [INFO] [__main__] experiment_lab | FAIL   | N   | ExperimentLab 检查失败：建议检查实验目录配置及权限: 'ExperimentLab' object has no attribute 'log_experiment'",
+            "2025-11-27 21:42:05 [INFO] [__main__] 所有 critical 检查均已通过。",
+            "2025-11-27 21:42:43 [INFO] [__main__] experiment_lab | FAIL   | N   | ExperimentLab 检查失败：建议检查实验目录配置及权限: 'ExperimentLab' object has no attribute 'log_experiment'"
+        ]
+    },
+    "notes": "This report is heuristic. Review site_defense and adjust RequestEngine / MarketHunter 配置时请结合实际情况。"
+}

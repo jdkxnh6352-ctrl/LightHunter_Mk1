@@ -1,0 +1,59 @@
+{
+    "meta": {
+        "version": "Mk-Config R10",
+        "description": "LightHunter central config (with U2 live filter profiles)"
+    },
+    "paths": {
+        "project_root": ".",
+        "config_dir": "config",
+        "reports_dir": "reports",
+        "log_dir": "logs",
+        "monitor_dir": "monitor"
+    },
+    "risk": {
+        "account": {
+            "max_total_drawdown_pct": 30.0,
+            "max_daily_loss_pct": -4.0,
+            "max_daily_drawdown_pct": 6.0,
+            "min_equity_ratio": 0.5
+        }
+    },
+    "u2_daily_filter": {
+        "min_price": 3.0,
+        "max_price": 60.0,
+        "min_amount_today": 20000000,
+        "min_amount_20d": 30000000,
+        "max_abs_ret_1": 0.09,
+        "min_ret_5": -0.25,
+        "max_ret_5": 0.25,
+        "max_ret_20": 0.6,
+        "min_prob": 0.55,
+        "top_k": 30
+    },
+    "u2_daily_filter_profiles": {
+        "default": {
+            "__note": "默认方案，不改就是 u2_daily_filter 本身。可以留空 {}。"
+        },
+        "__note": "这里是不同过滤方案的覆盖项；不写的字段会沿用 u2_daily_filter 里的默认值。",
+        "conservative": {
+            "min_price": 5.0,
+            "max_price": 50.0,
+            "min_amount_today": 30000000,
+            "min_amount_20d": 40000000,
+            "max_abs_ret_1": 0.07,
+            "max_ret_20": 0.5,
+            "min_prob": 0.6,
+            "top_k": 20
+        },
+        "aggressive": {
+            "min_price": 3.0,
+            "max_price": 80.0,
+            "min_amount_today": 15000000,
+            "min_amount_20d": 20000000,
+            "max_abs_ret_1": 0.12,
+            "max_ret_20": 0.8,
+            "min_prob": 0.5,
+            "top_k": 40
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "version": "Mk-TSPipelineConfig R10",
+  "ts_labeler": {
+    "ts_db": "ts_data.db",
+    "blackbox_file": "market_blackbox.csv",
+    "labeled_file": "market_blackbox_labeled.csv",
+    "horizon_minutes": 20,
+    "gain_threshold": 3.0
+  },
+  "ts_backtest": {
+    "entry_pct": 5.0,
+    "min_amount": 20000000.0,
+    "horizon_min": 10,
+    "cooldown_min": 15,
+    "max_trades_per_day": 50
+  },
+  "market_ts_builder": {
+    "ts_db": "ts_data.db",
+    "out_db": "market_ts.db",
+    "recent_days": 3
+  }
+}

@@ -1,0 +1,190 @@
+2025-11-28 00:01:38 [INFO] [__main__] ========================================================================
+2025-11-28 00:01:38 [INFO] [__main__] LightHunter Mk3 回归测试结果汇总
+2025-11-28 00:01:38 [INFO] [__main__] ------------------------------------------------------------------------
+2025-11-28 00:01:38 [INFO] [__main__] CHECK          | STATUS | CRT | MESSAGE
+2025-11-28 00:01:38 [INFO] [__main__] ------------------------------------------------------
+2025-11-28 00:01:38 [INFO] [__main__] config_paths   | FAIL   | C   | paths 中缺少关键字段: ['data_root', 'factors_dir', 'datasets_dir', 'experiments_dir']
+2025-11-28 00:01:38 [INFO] [__main__] duckdb_storage | OK     | C   | DuckDB 可写入可查询，路径: data/duckdb/lighthunter.duckdb
+2025-11-28 00:01:38 [INFO] [__main__] event_bus      | FAIL   | N   | 未找到 ZmqBus（bus.zmq_bus），跳过事件总线检查: cannot import name 'ZmqBus' from 'bus.zmq_bus' (G:\LightHunter_Mk1\bus\zmq_bus.py)
+2025-11-28 00:01:38 [INFO] [__main__] experiment_lab | FAIL   | N   | ExperimentLab 检查失败：建议检查实验目录配置及权限: 'ExperimentLab' object has no attribute 'log_experiment'
+2025-11-28 00:01:38 [ERROR] [__main__] 共有 1 项 critical 检查失败，建议立即排查后再上线。
+2025-11-28 00:01:38 [INFO] [__main__] ========================================================================
+2025-11-28 00:12:15 [INFO] [__main__] ========================================================================
+2025-11-28 00:12:15 [INFO] [__main__] LightHunter Mk3 回归测试结果汇总
+2025-11-28 00:12:15 [INFO] [__main__] ------------------------------------------------------------------------
+2025-11-28 00:12:15 [INFO] [__main__] CHECK          | STATUS | CRT | MESSAGE
+2025-11-28 00:12:15 [INFO] [__main__] ------------------------------------------------------
+2025-11-28 00:12:15 [INFO] [__main__] config_paths   | FAIL   | C   | paths 中缺少关键字段: ['data_root', 'factors_dir', 'datasets_dir', 'experiments_dir']
+2025-11-28 00:12:15 [INFO] [__main__] duckdb_storage | OK     | C   | DuckDB 可写入可查询，路径: data/duckdb/lighthunter.duckdb
+2025-11-28 00:12:15 [INFO] [__main__] event_bus      | FAIL   | N   | 未找到 ZmqBus（bus.zmq_bus），跳过事件总线检查: cannot import name 'ZmqBus' from 'bus.zmq_bus' (G:\LightHunter_Mk1\bus\zmq_bus.py)
+2025-11-28 00:12:15 [INFO] [__main__] experiment_lab | FAIL   | N   | ExperimentLab 检查失败：建议检查实验目录配置及权限: 'ExperimentLab' object has no attribute 'log_experiment'
+2025-11-28 00:12:15 [ERROR] [__main__] 共有 1 项 critical 检查失败，建议立即排查后再上线。
+2025-11-28 00:12:15 [INFO] [__main__] ========================================================================
+2025-11-28 00:45:43 [INFO] [__main__] ========================================================================
+2025-11-28 00:45:43 [INFO] [__main__] LightHunter Mk3 回归测试结果汇总
+2025-11-28 00:45:43 [INFO] [__main__] ------------------------------------------------------------------------
+2025-11-28 00:45:43 [INFO] [__main__] CHECK          | STATUS | CRT | MESSAGE
+2025-11-28 00:45:43 [INFO] [__main__] ------------------------------------------------------
+2025-11-28 00:45:43 [INFO] [__main__] config_paths   | OK     | C   | config_center & paths 检查通过
+2025-11-28 00:45:43 [INFO] [__main__] duckdb_storage | OK     | C   | DuckDB 可写入可查询，路径: data/duckdb/lighthunter.duckdb
+2025-11-28 00:45:43 [INFO] [__main__] event_bus      | FAIL   | N   | 未找到 ZmqBus（bus.zmq_bus），跳过事件总线检查: cannot import name 'ZmqBus' from 'bus.zmq_bus' (G:\LightHunter_Mk1\bus\zmq_bus.py)
+2025-11-28 00:45:43 [INFO] [__main__] experiment_lab | FAIL   | N   | ExperimentLab 检查失败：建议检查实验目录配置及权限: 'ExperimentLab' object has no attribute 'log_experiment'
+2025-11-28 00:45:43 [INFO] [__main__] 所有 critical 检查均已通过。
+2025-11-28 00:45:43 [INFO] [__main__] ========================================================================
+2025-11-28 00:58:02 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 00:58:02 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q=sh600000 HTTP/1.1" 200 None
+2025-11-28 01:01:40 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 01:01:40 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q=sh600000 HTTP/1.1" 200 None
+2025-11-28 01:09:10 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 01:09:10 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q=sh600000 HTTP/1.1" 200 None
+2025-11-28 01:09:10 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): push2.eastmoney.com:443
+2025-11-28 01:09:12 [DEBUG] [urllib3.connectionpool] https://push2.eastmoney.com:443 "GET /api/qt/stock/get?secid=1.600000&fields=f1%2Cf2%2Cf3 HTTP/1.1" 302 None
+2025-11-28 01:09:12 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): push2delay.eastmoney.com:443
+2025-11-28 01:09:13 [DEBUG] [urllib3.connectionpool] https://push2delay.eastmoney.com:443 "GET /api/qt/stock/get?secid=1.600000&fields=f1%2Cf2%2Cf3 HTTP/1.1" 200 77
+2025-11-28 01:33:11 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 01:33:12 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q=sz000001,sh600000,sz300750,sz002230,sh600519 HTTP/1.1" 200 None
+2025-11-28 01:33:12 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): push2.eastmoney.com:443
+2025-11-28 01:33:13 [DEBUG] [urllib3.connectionpool] https://push2.eastmoney.com:443 "GET /api/qt/stock/get?secid=0.000001&fields=f2%2Cf3%2Cf12%2Cf14 HTTP/1.1" 302 None
+2025-11-28 01:33:13 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): push2delay.eastmoney.com:443
+2025-11-28 01:33:14 [DEBUG] [urllib3.connectionpool] https://push2delay.eastmoney.com:443 "GET /api/qt/stock/get?secid=0.000001&fields=f2%2Cf3%2Cf12%2Cf14 HTTP/1.1" 200 77
+2025-11-28 01:33:24 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q=sz000001,sh600000,sz300750,sz002230,sh600519 HTTP/1.1" 200 None
+2025-11-28 01:33:24 [DEBUG] [urllib3.connectionpool] https://push2.eastmoney.com:443 "GET /api/qt/stock/get?secid=0.000001&fields=f2%2Cf3%2Cf12%2Cf14 HTTP/1.1" 302 None
+2025-11-28 01:33:25 [DEBUG] [urllib3.connectionpool] https://push2delay.eastmoney.com:443 "GET /api/qt/stock/get?secid=0.000001&fields=f2%2Cf3%2Cf12%2Cf14 HTTP/1.1" 200 77
+2025-11-28 01:33:35 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q=sz000001,sh600000,sz300750,sz002230,sh600519 HTTP/1.1" 200 None
+2025-11-28 01:33:35 [DEBUG] [urllib3.connectionpool] https://push2.eastmoney.com:443 "GET /api/qt/stock/get?secid=0.000001&fields=f2%2Cf3%2Cf12%2Cf14 HTTP/1.1" 302 None
+2025-11-28 01:33:36 [DEBUG] [urllib3.connectionpool] https://push2delay.eastmoney.com:443 "GET /api/qt/stock/get?secid=0.000001&fields=f2%2Cf3%2Cf12%2Cf14 HTTP/1.1" 200 77
+2025-11-28 01:47:00 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 01:47:00 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q=sz000001,sh600000,sz300750,sz002230,sh600519 HTTP/1.1" 200 None
+2025-11-28 01:47:00 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): push2.eastmoney.com:443
+2025-11-28 01:47:02 [DEBUG] [urllib3.connectionpool] https://push2.eastmoney.com:443 "GET /api/qt/stock/get?secid=1.600000&fields=f2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf12%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf30%2Cf31%2Cf32%2Cf33%2Cf34%2Cf35%2Cf37%2Cf38%2Cf39%2Cf43%2Cf57%2Cf58 HTTP/1.1" 302 None
+2025-11-28 01:47:02 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): push2delay.eastmoney.com:443
+2025-11-28 01:47:04 [DEBUG] [urllib3.connectionpool] https://push2delay.eastmoney.com:443 "GET /api/qt/stock/get?secid=1.600000&fields=f2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf12%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf30%2Cf31%2Cf32%2Cf33%2Cf34%2Cf35%2Cf37%2Cf38%2Cf39%2Cf43%2Cf57%2Cf58 HTTP/1.1" 200 123
+2025-11-28 01:47:14 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q=sz000001,sh600000,sz300750,sz002230,sh600519 HTTP/1.1" 200 None
+2025-11-28 01:47:14 [DEBUG] [urllib3.connectionpool] https://push2.eastmoney.com:443 "GET /api/qt/stock/get?secid=1.600000&fields=f2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf12%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf30%2Cf31%2Cf32%2Cf33%2Cf34%2Cf35%2Cf37%2Cf38%2Cf39%2Cf43%2Cf57%2Cf58 HTTP/1.1" 302 None
+2025-11-28 01:47:15 [DEBUG] [urllib3.connectionpool] https://push2delay.eastmoney.com:443 "GET /api/qt/stock/get?secid=1.600000&fields=f2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf12%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf30%2Cf31%2Cf32%2Cf33%2Cf34%2Cf35%2Cf37%2Cf38%2Cf39%2Cf43%2Cf57%2Cf58 HTTP/1.1" 200 123
+2025-11-28 01:47:25 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q=sz000001,sh600000,sz300750,sz002230,sh600519 HTTP/1.1" 200 None
+2025-11-28 01:47:25 [DEBUG] [urllib3.connectionpool] https://push2.eastmoney.com:443 "GET /api/qt/stock/get?secid=1.600000&fields=f2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf12%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf30%2Cf31%2Cf32%2Cf33%2Cf34%2Cf35%2Cf37%2Cf38%2Cf39%2Cf43%2Cf57%2Cf58 HTTP/1.1" 302 None
+2025-11-28 01:47:26 [DEBUG] [urllib3.connectionpool] https://push2delay.eastmoney.com:443 "GET /api/qt/stock/get?secid=1.600000&fields=f2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf12%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf30%2Cf31%2Cf32%2Cf33%2Cf34%2Cf35%2Cf37%2Cf38%2Cf39%2Cf43%2Cf57%2Cf58 HTTP/1.1" 200 123
+2025-11-28 10:07:50 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 10:07:50 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q=sh600000 HTTP/1.1" 200 None
+2025-11-28 10:08:28 [INFO] [data.source_catalog] SourceCatalog loaded 5 data sources: daily_quote_primary, eastmoney_quote, sina_quote, ths_quote, tx_quote
+2025-11-28 10:08:28 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 10:41:17 [INFO] [request_engine] RequestEngine 初始化完成。默认超时=8.0, 全局重试=3
+2025-11-28 10:41:17 [INFO] [data.source_catalog] SourceCatalog loaded 5 data sources: daily_quote_primary, eastmoney_quote, sina_quote, ths_quote, tx_quote
+2025-11-28 10:41:17 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 10:42:13 [INFO] [request_engine] RequestEngine 初始化完成。默认超时=8.0, 全局重试=3
+2025-11-28 10:42:13 [INFO] [data.source_catalog] SourceCatalog loaded 5 data sources: daily_quote_primary, eastmoney_quote, sina_quote, ths_quote, tx_quote
+2025-11-28 10:42:13 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 10:42:57 [INFO] [request_engine] RequestEngine 初始化完成。默认超时=8.0, 全局重试=3
+2025-11-28 10:42:57 [INFO] [data.source_catalog] SourceCatalog loaded 5 data sources: daily_quote_primary, eastmoney_quote, sina_quote, ths_quote, tx_quote
+2025-11-28 10:42:57 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 10:58:30 [INFO] [request_engine] RequestEngine 初始化完成: default_timeout=8.0s, default_max_retries=3
+2025-11-28 10:58:30 [INFO] [data.source_catalog] SourceCatalog loaded 5 data sources: daily_quote_primary, eastmoney_quote, sina_quote, ths_quote, tx_quote
+2025-11-28 10:58:30 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 10:58:30 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 10:58:30 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 10:58:30 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 10:58:40 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 10:58:41 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 10:58:41 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 10:58:51 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 10:58:51 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 10:58:51 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 12:08:02 [INFO] [request_engine] RequestEngine 初始化完成: default_timeout=8.0s, default_max_retries=3
+2025-11-28 13:00:27 [INFO] [request_engine] RequestEngine 初始化完成: default_timeout=8.0s, default_max_retries=3
+2025-11-28 13:00:31 [INFO] [data.source_catalog] SourceCatalog loaded 5 data sources: daily_quote_primary, eastmoney_quote, sina_quote, ths_quote, tx_quote
+2025-11-28 13:00:31 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 13:00:31 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 13:00:31 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 13:00:31 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 13:01:31 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 13:01:31 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 13:01:31 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 13:02:31 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 13:02:32 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 13:02:32 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 13:41:35 [INFO] [request_engine] RequestEngine 初始化完成: default_timeout=8.0s, default_max_retries=3
+2025-11-28 13:41:35 [INFO] [data.source_catalog] SourceCatalog loaded 5 data sources: daily_quote_primary, eastmoney_quote, sina_quote, ths_quote, tx_quote
+2025-11-28 13:41:35 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 13:41:35 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 13:41:35 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 13:41:35 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 13:42:35 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 13:42:35 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 13:42:35 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 13:43:35 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 13:43:35 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 13:43:35 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 13:44:35 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 13:44:35 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 13:44:35 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 13:45:36 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 13:45:36 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 13:45:36 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 13:58:54 [INFO] [request_engine] RequestEngine 初始化完成: default_timeout=8.0s, default_max_retries=3
+2025-11-28 13:58:54 [INFO] [data.source_catalog] SourceCatalog loaded 5 data sources: daily_quote_primary, eastmoney_quote, sina_quote, ths_quote, tx_quote
+2025-11-28 13:58:54 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 13:58:54 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 13:58:55 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 13:58:55 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:14:35 [INFO] [request_engine] RequestEngine 初始化完成: default_timeout=8.0s, default_max_retries=3
+2025-11-28 14:14:35 [INFO] [data.source_catalog] SourceCatalog loaded 5 data sources: daily_quote_primary, eastmoney_quote, sina_quote, ths_quote, tx_quote
+2025-11-28 14:14:35 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:14:35 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 14:14:35 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:14:35 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:15:01 [INFO] [request_engine] RequestEngine 初始化完成: default_timeout=8.0s, default_max_retries=3
+2025-11-28 14:15:01 [INFO] [data.source_catalog] SourceCatalog loaded 5 data sources: daily_quote_primary, eastmoney_quote, sina_quote, ths_quote, tx_quote
+2025-11-28 14:15:01 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:15:01 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 14:15:02 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (2): qt.gtimg.cn:443
+2025-11-28 14:15:02 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:15:02 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:15:12 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:15:12 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:15:12 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:15:22 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:15:22 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:15:22 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:28:20 [INFO] [request_engine] RequestEngine 初始化完成: default_timeout=8.0s, default_max_retries=3
+2025-11-28 14:28:20 [INFO] [data.source_catalog] SourceCatalog loaded 5 data sources: daily_quote_primary, eastmoney_quote, sina_quote, ths_quote, tx_quote
+2025-11-28 14:28:20 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:28:20 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-11-28 14:28:20 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:28:20 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:29:20 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:29:20 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:29:20 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:30:20 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:30:20 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:30:20 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:31:20 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:31:21 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:31:21 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:32:21 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:32:21 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:32:21 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:33:21 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:33:21 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:33:21 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:34:21 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:34:21 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:34:21 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:35:21 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:35:21 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:35:21 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 14:36:21 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-11-28 14:36:21 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-11-28 14:36:21 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-11-28 18:47:56 [ERROR] [config.config_center] 加载 system_config 失败: Invalid name "system_config.{'name': 'dev', 'timezone': 'asia/shanghai', 'trading_calendar': 'china_stock'}.json"
+Traceback (most recent call last):
+  File "G:\LightHunter_Mk1\config\config_center.py", line 185, in get_system_config
+    cfg = _load_system_config_from_disk()
+  File "G:\LightHunter_Mk1\config\config_center.py", line 148, in _load_system_config_from_disk
+    env_cfg_path = cfg_path.with_name(
+  File "C:\Users\92086\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 762, in with_name
+    raise ValueError("Invalid name %r" % (name))
+ValueError: Invalid name "system_config.{'name': 'dev', 'timezone': 'asia/shanghai', 'trading_calendar': 'china_stock'}.json"
+2025-11-28 19:11:04 [INFO] [run_walkforward_backtests] 启动 Walk‑Forward 回测：job_id=ultrashort_main, strategies=['U2'], wf_conf=WalkForwardConfig(start_date='2020-01-01', end_date='2025-11-28', train_days=120, test_days=20, step_days=20, mode='sliding')
+2025-11-28 19:11:04 [INFO] [alpha.training_pipelines] Walk‑Forward 配置：WalkForwardConfig(start_date='2020-01-01', end_date='2025-11-28', train_days=120, test_days=20, step_days=20, mode='sliding')，生成折数=102
+2025-11-28 19:11:04 [INFO] [alpha.training_pipelines] Fold #0: train [2020-01-01, 2020-04-29], test [2020-04-30, 2020-05-19]

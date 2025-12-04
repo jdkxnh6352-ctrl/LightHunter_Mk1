@@ -1,0 +1,332 @@
+# config/jobs.yaml
+# LightHunter 统一任务配置（采集任务矩阵 + 运行流水线）
+
+jobs:
+  # =========================
+  # A 类：日线行情 / 多源日线
+  # =========================
+
+  collect_daily_multi_source:
+    description: "A1: 多源日线K线采集（em + ths + sina，全A股）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - collectors.daily_multi_source_quotes
+      - --universe
+      - all_a          # 全A股，后续可在脚本中解析成具体股票列表
+      - --sources
+      - em,ths,sina    # 多源采集，用于 multi_source_daily & 数据质量评估
+    schedule:
+      mode: daily
+      time: "15:20"     # 收盘后 15:20 左右
+      days_of_week: [1, 2, 3, 4, 5]
+
+  collect_index_daily:
+    description: "F1: 主流指数日线K线采集（上证/深证/创业板/科创等）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - collectors.index_daily_quotes
+      - --universe
+      - main_indices   # 自定义指数集合
+    schedule:
+      mode: daily
+      time: "15:30"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  # =========================
+  # B 类：盘中 L1 快照 / 分钟线
+  # =========================
+
+  collect_intraday_snapshot:
+    description: "B1: 盘中L1快照采集（自选池 + 高换手池，高频）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - collectors.intraday_snapshot_collector
+      - --universe
+      - ultrashort_pool    # 超短主战池（自选 + 高换手前N）
+      - --interval-sec
+      - "3"                 # 每 3 秒一次，可根据防封策略调整
+    schedule:
+      mode: interval        # 由 Scheduler 解释为盘中循环任务
+      interval_sec: 3
+      active_time_range:
+        start: "09:25"
+        end: "15:05"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  collect_intraday_minute_bar:
+    description: "B2: 盘中分钟线采集/聚合（支持由快照聚合）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - collectors.intraday_minute_bar
+      - --universe
+      - ultrashort_pool
+    schedule:
+      mode: interval
+      interval_sec: 60
+      active_time_range:
+        start: "09:30"
+        end: "15:00"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  intraday_gap_fixer_focus_pool:
+    description: "B3: 盘中快照缺口补录（重点股票池）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - tools.ts_intraday_gap_fixer
+      - --universe
+      - ultrashort_pool
+      - --date
+      - "{trade_date}"
+    schedule:
+      mode: daily
+      time: "15:40"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  # =========================
+  # C 类：概念 / 板块 / 基础信息
+  # =========================
+
+  collect_basic_info:
+    description: "C0: 股票基础信息采集（上市日期、板块、ST 标记等）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - collectors.basic_info_collector
+      - --universe
+      - all_a
+    schedule:
+      mode: daily
+      time: "02:00"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  collect_concept_universe:
+    description: "C1: 概念/板块列表采集（同花顺/东方财富）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - collectors.concept_universe_collector
+    schedule:
+      mode: daily
+      time: "02:10"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  collect_concept_membership:
+    description: "C2: 概念成分股采集（构建股票-概念图谱）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - collectors.concept_membership_collector
+    schedule:
+      mode: daily
+      time: "02:20"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  collect_limit_up_board_ths:
+    description: "C3: 涨停/连板/炸板榜（同花顺）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - collectors.ths_limit_up_board
+      - --date
+      - "{trade_date}"
+    schedule:
+      mode: daily
+      time: "15:25"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  collect_lhb_em:
+    description: "C4: 龙虎榜数据（东方财富）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - collectors.em_lhb
+      - --date
+      - "{trade_date}"
+    schedule:
+      mode: daily
+      time: "17:00"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  # =========================
+  # D 类：财务 / F10 基本面
+  # =========================
+
+  collect_weekly_fundamentals:
+    description: "D1: 周度财务指标同步（全A股）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - collectors.em_fundamentals
+      - --universe
+      - all_a
+      - --mode
+      - weekly
+    schedule:
+      mode: weekly
+      weekday: 6           # 周六
+      time: "03:00"
+
+  # =========================
+  # E 类：舆情 / 情绪
+  # =========================
+
+  collect_sentiment_forums:
+    description: "E1: 论坛舆情采集（淘股吧 / 雪球等，热点股）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - collectors.sentiment_scraper
+      - --mode
+      - forums
+      - --universe
+      - ultrashort_pool
+    schedule:
+      mode: interval
+      interval_sec: 600
+      active_time_range:
+        start: "09:00"
+        end: "23:00"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  collect_news_headlines:
+    description: "E2: 新闻标题采集（情绪 & 风险事件）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - collectors.sentiment_scraper
+      - --mode
+      - news
+    schedule:
+      mode: interval
+      interval_sec: 300
+      active_time_range:
+        start: "09:00"
+        end: "23:00"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  # =========================
+  # F 类：数据质量 / TS 体检
+  # =========================
+
+  data_quality_daily:
+    description: "F1: 多源字段质量评估 & 日报输出（data_source_quality_checker）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - tools.data_source_quality_checker
+    schedule:
+      mode: daily
+      time: "03:10"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  ts_health_check:
+    description: "F2: TS 数据体检（缺失/断档/异常）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - tools.ts_health_checker
+    schedule:
+      mode: daily
+      time: "03:20"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  # =========================
+  # G 类：科研流水线 / 回归测试（原有任务保留）
+  # =========================
+
+  night_ops_full:
+    description: "夜间全流程科研流水线（体检 + 修复 + 构建训练集 + 训练 + 回测）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - ops.night_ops
+      - --mode
+      - full
+    schedule:
+      mode: daily
+      time: "03:00"           # 每天 03:00
+      days_of_week: [1, 2, 3, 4, 5]  # 1=周一, ... 7=周日
+
+  day_ops_morning:
+    description: "盘前体检（检查上一晚 NightOps 是否成功、数据是否齐全）"
+    enabled: true
+    command:
+      - python
+      - -m
+      - ops.day_ops
+    schedule:
+      mode: daily
+      time: "08:40"
+      days_of_week: [1, 2, 3, 4, 5]
+
+  retrain_ultrashort_weekly:
+    description: "每周一次超短线模型重新训练（示例）"
+    enabled: false     # 你准备好再打开
+    command:
+      - python
+      - -m
+      - alpha.training_pipelines
+      - --job
+      - ultrashort_main
+    schedule:
+      mode: daily
+      time: "02:00"
+      days_of_week: [6, 7]   # 周六、周日夜间跑
+    backtest_u2_walkforward:
+    description: "G3: U2 超短线策略 Walk-Forward 回测（收益最大化风格）"
+    enabled: false      # 默认先关着，用 --run-once 手动执行
+    command:
+      - python
+      - -m
+      - tools.run_walkforward_backtests
+      - --job-id
+      - ultrashort_main
+      - --strategies
+      - U2
+      - --start-date
+      - "2024-01-01"
+      - --end-date
+      - "2025-11-28"
+      - --train-days
+      - "120"
+      - --test-days
+      - "20"
+      - --mode
+      - sliding
+      - --top-k
+      - "20"
+      - --experiment-group
+      - U2_WF_MAIN
+    schedule:
+      mode: manual
+
+  monitor_daemon:
+    description: "监控守护进程（建议用 systemd/supervisor 启动，不用 scheduler）"
+    enabled: false
+    command:
+      - python
+      - -m
+      - ops.monitor_daemon
+    schedule:
+      mode: manual

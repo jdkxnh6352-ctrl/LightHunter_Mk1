@@ -1,0 +1,30 @@
+2025-11-29 15:58:00 [INFO] [run_walkforward_backtests] 启动 Walk‑Forward 回测：job_id=ultrashort_main, strategies=['U2'], wf_conf=WalkForwardConfig(start_date='2020-01-01', end_date='2025-11-28', train_days=120, test_days=20, step_days=20, mode='sliding')
+2025-11-29 15:58:00 [INFO] [alpha.training_pipelines] Walk‑Forward 配置：WalkForwardConfig(start_date='2020-01-01', end_date='2025-11-28', train_days=120, test_days=20, step_days=20, mode='sliding')，生成折数=102
+2025-11-29 15:58:00 [INFO] [alpha.training_pipelines] Fold #0: train [2020-01-01, 2020-04-29], test [2020-04-30, 2020-05-19]
+2025-11-29 17:22:19 [INFO] [run_walkforward_backtests] 启动 Walk‑Forward 回测：job_id=ultrashort_main, strategies=['U2'], wf_conf=WalkForwardConfig(start_date='2020-01-01', end_date='2025-11-28', train_days=120, test_days=20, step_days=20, mode='sliding')
+2025-11-29 17:22:19 [INFO] [alpha.training_pipelines] Walk‑Forward 配置：WalkForwardConfig(start_date='2020-01-01', end_date='2025-11-28', train_days=120, test_days=20, step_days=20, mode='sliding')，生成折数=102
+2025-11-29 17:22:19 [INFO] [alpha.training_pipelines] Fold #0: train [2020-01-01, 2020-04-29], test [2020-04-30, 2020-05-19]
+2025-11-29 17:22:19 [INFO] [alpha.dataset_builder] DatasetBuilder 初始化完成: job_id=ultrashort_main, dataset_root=G:\LightHunter_Mk1\data\datasets
+2025-11-29 17:22:19 [INFO] [alpha.dataset_builder] DatasetBuilder.build_for_walkforward: job_id=ultrashort_main, strategy_id=U2, train=[2020-01-01, 2020-04-29], test=[2020-04-30, 2020-05-19]
+2025-11-29 17:22:19 [ERROR] [alpha.dataset_builder] DatasetBuilder: 未找到可用的数据集文件，请在 G:\LightHunter_Mk1\data\datasets 下创建 ultrashort_main.(parquet|csv)。
+2025-11-29 17:22:19 [WARNING] [alpha.dataset_builder] DatasetBuilder: 数据集为空，返回空的 train/valid/test。 请先在 data/datasets 下准备 ultrashort_main.(parquet|csv)。
+2025-11-29 19:03:20 [INFO] [request_engine] RequestEngine 初始化完成: default_timeout=8.0s, default_max_retries=3
+2025-11-29 19:03:20 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): push2his.eastmoney.com:443
+2025-11-29 19:03:21 [DEBUG] [urllib3.connectionpool] https://push2his.eastmoney.com:443 "GET /api/qt/stock/kline/get?secid=0.000001&klt=101&fqt=1&beg=20200101&end=20251129&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61 HTTP/1.1" 200 41006
+2025-11-29 19:03:22 [DEBUG] [request_engine] [REQ OK] method=GET site=eastmoney_quote source_id=None status=200 url=https://push2his.eastmoney.com/api/qt/stock/kline/get
+2025-11-29 19:03:24 [DEBUG] [urllib3.connectionpool] https://push2his.eastmoney.com:443 "GET /api/qt/stock/kline/get?secid=1.600000&klt=101&fqt=1&beg=20200101&end=20251129&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61 HTTP/1.1" 200 36344
+2025-11-29 19:03:25 [DEBUG] [request_engine] [REQ OK] method=GET site=eastmoney_quote source_id=None status=200 url=https://push2his.eastmoney.com/api/qt/stock/kline/get
+2025-11-29 19:03:28 [DEBUG] [urllib3.connectionpool] https://push2his.eastmoney.com:443 "GET /api/qt/stock/kline/get?secid=0.300750&klt=101&fqt=1&beg=20200101&end=20251129&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61 HTTP/1.1" 200 45994
+2025-11-29 19:03:28 [DEBUG] [request_engine] [REQ OK] method=GET site=eastmoney_quote source_id=None status=200 url=https://push2his.eastmoney.com/api/qt/stock/kline/get
+2025-11-29 19:03:30 [DEBUG] [urllib3.connectionpool] https://push2his.eastmoney.com:443 "GET /api/qt/stock/kline/get?secid=0.002230&klt=101&fqt=1&beg=20200101&end=20251129&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61 HTTP/1.1" 200 44180
+2025-11-29 19:03:31 [DEBUG] [request_engine] [REQ OK] method=GET site=eastmoney_quote source_id=None status=200 url=https://push2his.eastmoney.com/api/qt/stock/kline/get
+2025-11-29 19:03:33 [DEBUG] [urllib3.connectionpool] https://push2his.eastmoney.com:443 "GET /api/qt/stock/kline/get?secid=1.605119&klt=101&fqt=1&beg=20200101&end=20251129&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61 HTTP/1.1" 200 None
+2025-11-29 19:03:33 [DEBUG] [request_engine] [REQ OK] method=GET site=eastmoney_quote source_id=None status=200 url=https://push2his.eastmoney.com/api/qt/stock/kline/get
+2025-11-29 19:56:48 [INFO] [run_walkforward_backtests] 启动 Walk‑Forward 回测：job_id=ultrashort_main, strategies=['U2'], wf_conf=WalkForwardConfig(start_date='2020-01-01', end_date='2025-11-28', train_days=120, test_days=20, step_days=20, mode='sliding')
+2025-11-29 19:56:48 [INFO] [alpha.training_pipelines] Walk‑Forward 配置：WalkForwardConfig(start_date='2020-01-01', end_date='2025-11-28', train_days=120, test_days=20, step_days=20, mode='sliding')，生成折数=102
+2025-11-29 19:56:48 [INFO] [alpha.training_pipelines] Fold #0: train [2020-01-01, 2020-04-29], test [2020-04-30, 2020-05-19]
+2025-11-29 19:56:48 [INFO] [alpha.dataset_builder] DatasetBuilder 初始化完成: job_id=ultrashort_main, dataset_root=G:\LightHunter_Mk1\data\datasets
+2025-11-29 19:56:48 [INFO] [alpha.dataset_builder] DatasetBuilder.build_for_walkforward: job_id=ultrashort_main, strategy_id=U2, train=[2020-01-01, 2020-04-29], test=[2020-04-30, 2020-05-19]
+2025-11-29 19:56:49 [INFO] [alpha.dataset_builder] DatasetBuilder: 已从 G:\LightHunter_Mk1\data\datasets\ultrashort_main.parquet 载入数据集 rows=5568 cols=14
+2025-11-29 19:56:49 [INFO] [alpha.dataset_builder] DatasetBuilder: 自动识别列名完成 date_col=trading_date, symbol_col=code, label_col=label
+2025-11-29 19:56:49 [ERROR] [alpha.dataset_builder] DatasetBuilder: 将 trading_date 转为日期失败: 'trading_date'

@@ -1,0 +1,36 @@
+{
+  "dataset": {
+    "path": "data/datasets/ultrashort_main.parquet",
+    "label_col": "label_u2",
+    "feature_cols": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "amount",
+      "ret_1",
+      "ret_5",
+      "ret_20",
+      "vol_20",
+      "amt_mean_20"
+    ],
+    "train_days": 120
+  },
+  "scoring": {
+    "strategy_id": "U2",
+    "top_k": 4,
+    "min_prob": 0.60,
+    "min_price": 3.0,
+    "max_price": 80.0,
+    "min_amount": 20000000.0,
+    "position_weight": 0.30,
+    "stop_loss": 0.05,
+    "take_profit": 0.08
+  },
+  "output": {
+    "dir": "reports/u2_daily",
+    "file_prefix": "u2_candidates_",
+    "encoding": "utf-8-sig"
+  }
+}

@@ -1,0 +1,4 @@
+trade_date,strategy_tag,job_id,code,current_pos,target_weight,action
+2025-10-31,u1_v1_base_rf,ultrashort_main,2230,0.0,0.03,BUY
+2025-10-31,u1_v1_base_rf,ultrashort_main,1,0.0,0.03,BUY
+2025-10-31,u1_v1_base_rf,ultrashort_main,600000,0.0,0.03,BUY

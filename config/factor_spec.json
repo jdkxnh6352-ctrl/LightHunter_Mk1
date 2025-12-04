@@ -1,0 +1,13 @@
+{
+  "order_flow": {
+    "enabled": true,
+    "lookbacks": [3, 10, 30],
+    "min_points": 2,
+    "heavy_volume_threshold": 200000
+  },
+  "price_volume": {
+    "enabled": true,
+    "intraday_return_windows": [1, 3, 10],
+    "volatility_windows": [10, 30]
+  }
+}

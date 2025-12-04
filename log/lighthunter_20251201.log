@@ -1,0 +1,936 @@
+2025-12-01 09:11:02 [INFO] [request_engine] RequestEngine 初始化完成: default_timeout=8.0s, default_max_retries=3
+2025-12-01 09:30:03 [INFO] [data.source_catalog] SourceCatalog loaded 5 data sources: daily_kline_ths, snapshot_eastmoney, snapshot_primary, snapshot_sina, snapshot_tx
+2025-12-01 09:30:03 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:30:03 [DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): qt.gtimg.cn:443
+2025-12-01 09:30:03 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:30:03 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:31:03 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:31:04 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:31:04 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:32:04 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:32:04 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:32:04 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:33:04 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:33:05 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:33:05 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:34:05 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:34:05 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:34:05 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:35:05 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:35:06 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:35:06 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:36:06 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:36:06 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:36:06 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:37:06 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:37:07 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:37:07 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:38:07 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:38:07 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:38:07 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:39:08 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:39:08 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:39:08 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:40:08 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:40:08 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:40:08 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:41:09 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:41:09 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:41:09 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:42:09 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:42:09 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:42:09 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:43:10 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:43:10 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:43:10 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:44:11 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:44:11 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:44:11 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:45:11 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:45:11 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:45:11 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:46:12 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:46:12 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:46:12 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:47:12 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:47:12 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:47:12 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:48:13 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:48:13 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:48:13 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:49:13 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:49:13 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:49:13 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:50:14 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:50:14 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:50:14 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:51:14 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:51:14 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:51:14 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:52:15 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:52:15 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:52:15 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:53:15 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:53:15 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:53:15 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:54:16 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:54:16 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:54:16 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:55:16 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:55:16 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:55:16 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:56:17 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:56:17 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:56:17 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:57:17 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:57:17 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:57:17 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:58:18 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:58:18 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:58:18 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 09:59:18 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 09:59:18 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 09:59:18 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:00:19 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:00:19 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:00:19 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:01:19 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:01:19 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:01:19 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:02:20 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:02:20 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:02:20 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:03:20 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:03:21 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:03:21 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:04:21 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:04:21 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:04:21 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:05:22 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:05:22 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:05:22 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:06:22 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:06:22 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:06:22 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:07:23 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:07:23 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:07:23 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:08:23 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:08:23 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:08:23 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:09:24 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:09:24 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:09:24 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:10:24 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:10:24 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:10:24 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:11:25 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:11:25 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:11:25 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:12:25 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:12:25 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:12:25 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:13:26 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:13:26 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:13:26 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:14:26 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:14:26 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:14:26 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:15:27 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:15:27 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:15:27 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:16:27 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:16:27 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:16:27 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:17:28 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:17:28 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:17:28 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:18:28 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:18:28 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:18:28 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:19:29 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:19:29 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:19:29 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:20:29 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:20:29 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:20:29 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:21:30 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:21:30 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:21:30 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:22:30 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:22:31 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:22:31 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:23:31 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:23:31 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:23:31 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:24:31 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:24:32 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:24:32 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:25:32 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:25:32 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:25:32 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:26:32 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:26:33 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:26:33 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:27:33 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:27:33 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:27:33 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:28:33 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:28:34 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:28:34 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:29:34 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:29:34 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:29:34 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:30:34 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:30:35 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:30:35 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:31:35 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:31:35 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:31:35 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:32:36 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:32:36 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:32:36 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:33:36 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:33:36 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:33:36 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:34:37 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:34:37 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:34:37 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:35:37 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:35:37 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:35:37 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:36:38 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:36:38 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:36:38 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:37:38 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:37:38 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:37:38 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:38:39 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:38:39 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:38:39 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:39:39 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:39:39 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:39:39 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:40:40 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:40:40 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:40:40 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:41:40 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:41:41 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:41:41 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:42:41 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:42:41 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:42:41 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:43:41 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:43:42 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:43:42 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:44:42 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:44:42 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:44:42 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:45:43 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:45:43 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:45:43 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:46:43 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:46:43 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:46:43 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:47:44 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:47:44 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:47:44 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:48:44 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:48:44 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:48:44 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:49:44 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:49:44 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:49:44 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:50:45 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:50:45 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:50:45 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:51:45 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:51:46 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:51:46 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:52:46 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:52:46 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:52:46 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:53:47 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:53:47 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:53:47 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:54:47 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:54:47 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:54:47 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:55:48 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:55:48 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:55:48 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:56:48 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:56:49 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:56:49 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:57:49 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:57:49 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:57:49 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:58:49 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:58:50 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:58:50 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 10:59:50 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 10:59:50 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 10:59:50 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:00:51 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:00:51 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:00:51 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:01:51 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:01:51 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:01:51 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:02:51 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:02:51 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:02:51 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:03:52 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:03:52 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:03:52 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:04:52 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:04:53 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:04:53 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:05:53 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:05:53 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:05:53 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:06:53 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:06:54 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:06:54 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:07:54 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:07:54 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:07:54 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:08:54 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:08:55 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:08:55 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:09:55 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:09:55 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:09:55 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:10:56 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:10:56 [DEBUG] [urllib3.connectionpool] Resetting dropped connection: qt.gtimg.cn
+2025-12-01 11:10:56 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:10:56 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:11:56 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:11:57 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:11:57 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:12:57 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:12:57 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:12:57 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:13:57 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:13:58 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:13:58 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:14:58 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:14:58 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:14:58 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:15:58 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:15:59 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:15:59 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:16:59 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:16:59 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:16:59 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:17:59 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:17:59 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:17:59 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:19:00 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:19:00 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:19:00 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:20:01 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:20:01 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:20:01 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:21:01 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:21:01 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:21:01 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:22:02 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:22:02 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:22:02 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:23:02 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:23:02 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:23:02 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:24:03 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:24:03 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:24:03 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:25:03 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:25:03 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:25:03 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:26:04 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:26:04 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:26:04 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:27:04 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:27:04 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:27:04 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:28:05 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:28:05 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:28:05 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 11:29:05 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 11:29:06 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 11:29:06 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:00:07 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:00:07 [DEBUG] [urllib3.connectionpool] Resetting dropped connection: qt.gtimg.cn
+2025-12-01 13:00:07 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:00:07 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:01:07 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:01:08 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:01:08 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:02:08 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:02:08 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:02:08 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:03:08 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:03:09 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:03:09 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:04:09 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:04:09 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:04:09 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:05:10 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:05:10 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:05:10 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:06:10 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:06:10 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:06:10 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:07:11 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:07:11 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:07:11 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:08:11 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:08:11 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:08:11 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:09:12 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:09:12 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:09:12 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:10:12 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:10:12 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:10:12 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:11:13 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:11:13 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:11:13 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:12:13 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:12:13 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:12:13 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:13:14 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:13:14 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:13:14 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:14:14 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:14:14 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:14:14 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:15:15 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:15:15 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:15:15 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:16:15 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:16:15 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:16:15 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:17:16 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:17:16 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:17:16 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:18:16 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:18:16 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:18:16 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:19:17 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:19:17 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:19:17 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:20:17 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:20:17 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:20:17 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:21:18 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:21:18 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:21:18 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:22:18 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:22:18 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:22:18 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:23:19 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:23:19 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:23:19 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:24:19 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:24:19 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:24:19 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:25:20 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:25:20 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:25:20 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:26:20 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:26:20 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:26:20 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:27:21 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:27:21 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:27:21 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:28:21 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:28:21 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:28:21 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:29:22 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:29:22 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:29:22 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:30:23 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:30:23 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:30:23 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:31:23 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:31:23 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:31:23 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:32:24 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:32:24 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:32:24 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:33:24 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:33:24 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:33:24 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:34:25 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:34:25 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:34:25 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:35:25 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:35:25 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:35:25 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:36:26 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:36:26 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:36:26 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:37:26 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:37:26 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:37:26 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:38:27 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:38:27 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:38:27 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:39:27 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:39:27 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:39:27 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:40:28 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:40:28 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:40:28 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:41:28 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:41:28 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:41:28 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:42:29 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:42:29 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:42:29 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:43:29 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:43:29 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:43:29 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:44:30 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:44:30 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:44:30 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:45:31 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:45:31 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:45:31 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:46:31 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:46:31 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:46:32 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:47:32 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:47:32 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:47:32 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:48:32 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:48:33 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:48:33 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:49:33 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:49:33 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:49:33 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:50:33 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:50:34 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:50:34 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:51:34 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:51:34 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:51:34 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:52:34 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:52:35 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:52:35 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:53:35 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:53:35 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:53:35 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:54:35 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:54:36 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:54:36 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:55:36 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:55:36 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:55:36 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:56:37 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:56:37 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:56:37 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:57:37 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:57:37 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:57:37 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:58:38 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:58:38 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:58:38 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 13:59:38 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 13:59:38 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 13:59:38 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:00:39 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:00:39 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:00:39 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:01:39 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:01:39 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:01:39 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:02:40 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:02:40 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:02:40 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:03:40 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:03:40 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:03:40 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:04:41 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:04:41 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:04:41 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:05:41 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:05:41 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:05:41 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:06:42 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:06:42 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:06:42 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:07:42 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:07:43 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:07:43 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:08:43 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:08:43 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:08:43 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:09:44 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:09:44 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:09:44 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:10:44 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:10:44 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:10:44 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:11:45 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:11:45 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:11:45 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:12:45 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:12:45 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:12:45 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:13:46 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:13:46 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:13:46 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:14:46 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:14:46 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:14:46 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:15:47 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:15:47 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:15:47 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:16:47 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:16:47 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:16:47 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:17:48 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:17:48 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:17:48 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:18:48 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:18:48 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:18:48 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:19:48 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:19:48 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:19:48 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:20:49 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:20:49 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:20:49 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:21:49 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:21:50 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:21:50 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:22:50 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:22:50 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:22:50 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:23:50 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:23:51 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:23:51 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:24:51 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:24:51 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:24:51 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:25:51 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:25:52 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:25:52 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:26:52 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:26:52 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:26:52 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:27:53 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:27:53 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:27:53 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:28:53 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:28:53 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:28:53 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:29:54 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:29:54 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:29:54 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:30:54 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:30:55 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:30:55 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:31:55 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:31:55 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:31:55 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:32:56 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:32:56 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:32:56 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:33:56 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:33:56 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:33:56 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:34:57 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:34:57 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:34:57 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:35:57 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:35:57 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:35:57 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:36:58 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:36:58 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:36:58 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:37:58 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:37:58 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:37:58 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:38:59 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:38:59 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:38:59 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:39:59 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:39:59 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:39:59 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:41:00 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:41:00 [DEBUG] [urllib3.connectionpool] Resetting dropped connection: qt.gtimg.cn
+2025-12-01 14:41:00 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:41:00 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:42:01 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:42:01 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:42:01 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:43:01 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:43:01 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:43:01 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:44:02 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:44:02 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:44:02 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:45:02 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:45:02 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:45:02 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:46:03 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:46:03 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:46:03 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:47:03 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:47:03 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:47:03 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:48:04 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:48:04 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:48:04 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:49:04 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:49:04 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:49:04 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:50:05 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:50:05 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:50:05 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:51:05 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:51:05 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:51:05 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:52:06 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:52:06 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:52:06 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:53:06 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:53:07 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:53:07 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:54:07 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:54:07 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:54:07 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:55:08 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:55:08 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:55:08 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:56:08 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:56:08 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:56:08 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:57:09 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:57:09 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:57:09 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:58:09 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:58:09 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:58:09 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 14:59:10 [DEBUG] [MarketAdapter] Requesting Tencent quotes: url=https://qt.gtimg.cn/q q=s_sz000001,s_sh600000,s_sz300750,s_sz002230,s_sh605119
+2025-12-01 14:59:10 [DEBUG] [urllib3.connectionpool] https://qt.gtimg.cn:443 "GET /q?q=s_sz000001%2Cs_sh600000%2Cs_sz300750%2Cs_sz002230%2Cs_sh605119 HTTP/1.1" 200 None
+2025-12-01 14:59:10 [DEBUG] [request_engine] [REQ OK] method=GET site=default source_id=tx_quote status=200 url=https://qt.gtimg.cn/q
+2025-12-01 18:32:27 [INFO] [U2DailyScoringBacktest] 使用引擎: u2
+2025-12-01 18:32:27 [INFO] [U2DailyScoringBacktest] 读取数据集：data/datasets\ultrashort_main.parquet
+2025-12-01 18:32:27 [INFO] [U2DailyScoringBacktest] 回测日期区间：2019-01-01 ~ 2025-11-28（数据全体区间：2020-02-07 ~ 2025-10-31）
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-10 可用训练天数仅有 1，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-11 可用训练天数仅有 2，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-12 可用训练天数仅有 3，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-13 可用训练天数仅有 4，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-14 可用训练天数仅有 5，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-17 可用训练天数仅有 6，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-18 可用训练天数仅有 7，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-19 可用训练天数仅有 8，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-20 可用训练天数仅有 9，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-21 可用训练天数仅有 10，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-24 可用训练天数仅有 11，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-25 可用训练天数仅有 12，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-26 可用训练天数仅有 13，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-27 可用训练天数仅有 14，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-28 可用训练天数仅有 15，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-02 可用训练天数仅有 16，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-03 可用训练天数仅有 17，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-04 可用训练天数仅有 18，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-05 可用训练天数仅有 19，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-06 可用训练天数仅有 20，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-09 可用训练天数仅有 21，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-10 可用训练天数仅有 22，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-11 可用训练天数仅有 23，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-12 可用训练天数仅有 24，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-13 可用训练天数仅有 25，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-16 可用训练天数仅有 26，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-17 可用训练天数仅有 27，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-18 可用训练天数仅有 28，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-19 可用训练天数仅有 29，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-20 可用训练天数仅有 30，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-23 可用训练天数仅有 31，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-24 可用训练天数仅有 32，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-25 可用训练天数仅有 33，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-26 可用训练天数仅有 34，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-27 可用训练天数仅有 35，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-30 可用训练天数仅有 36，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-31 可用训练天数仅有 37，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-01 可用训练天数仅有 38，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-02 可用训练天数仅有 39，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-03 可用训练天数仅有 40，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-07 可用训练天数仅有 41，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-08 可用训练天数仅有 42，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-09 可用训练天数仅有 43，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-10 可用训练天数仅有 44，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-13 可用训练天数仅有 45，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-14 可用训练天数仅有 46，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-15 可用训练天数仅有 47，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-16 可用训练天数仅有 48，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-17 可用训练天数仅有 49，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-20 可用训练天数仅有 50，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-21 可用训练天数仅有 51，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-22 可用训练天数仅有 52，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-23 可用训练天数仅有 53，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-24 可用训练天数仅有 54，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-27 可用训练天数仅有 55，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-28 可用训练天数仅有 56，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-29 可用训练天数仅有 57，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-30 可用训练天数仅有 58，略过该日打分。
+2025-12-01 18:32:27 [WARNING] [U2DailyScoringBacktest] 交易日 2020-05-06 可用训练天数仅有 59，略过该日打分。
+2025-12-01 18:33:31 [INFO] [U2DailyScoringBacktest] [U2 Backtest] 总体统计：交易日数=1332, 样本数=5328, 命中率(label_u2=1 比例)=0.8829
+2025-12-01 18:33:31 [INFO] [U2DailyScoringBacktest] [U2 Backtest] 按年份统计：
+ year  n_days  n_samples  hit_rate
+ 2020     163        652    0.9325
+ 2021     243        972    0.9074
+ 2022     242        968    0.8946
+ 2023     242        968    0.8884
+ 2024     242        968    0.8636
+ 2025     200        800    0.8150
+2025-12-01 18:33:31 [INFO] [U2DailyScoringBacktest] 候选股明细已写入：reports\u2_daily_scoring_backtest_ultrashort_main.csv
+2025-12-01 18:33:34 [INFO] [U2DailyScoringBacktest] 使用引擎: u3
+2025-12-01 18:33:34 [INFO] [U2DailyScoringBacktest] 读取数据集：data/datasets\ultrashort_main.parquet
+2025-12-01 18:33:34 [INFO] [U2DailyScoringBacktest] 回测日期区间：2019-01-01 ~ 2025-11-28（数据全体区间：2020-02-07 ~ 2025-10-31）
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-10 可用训练天数仅有 1，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-11 可用训练天数仅有 2，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-12 可用训练天数仅有 3，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-13 可用训练天数仅有 4，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-14 可用训练天数仅有 5，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-17 可用训练天数仅有 6，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-18 可用训练天数仅有 7，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-19 可用训练天数仅有 8，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-20 可用训练天数仅有 9，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-21 可用训练天数仅有 10，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-24 可用训练天数仅有 11，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-25 可用训练天数仅有 12，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-26 可用训练天数仅有 13，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-27 可用训练天数仅有 14，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-28 可用训练天数仅有 15，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-02 可用训练天数仅有 16，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-03 可用训练天数仅有 17，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-04 可用训练天数仅有 18，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-05 可用训练天数仅有 19，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-06 可用训练天数仅有 20，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-09 可用训练天数仅有 21，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-10 可用训练天数仅有 22，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-11 可用训练天数仅有 23，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-12 可用训练天数仅有 24，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-13 可用训练天数仅有 25，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-16 可用训练天数仅有 26，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-17 可用训练天数仅有 27，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-18 可用训练天数仅有 28，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-19 可用训练天数仅有 29，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-20 可用训练天数仅有 30，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-23 可用训练天数仅有 31，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-24 可用训练天数仅有 32，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-25 可用训练天数仅有 33，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-26 可用训练天数仅有 34，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-27 可用训练天数仅有 35，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-30 可用训练天数仅有 36，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-31 可用训练天数仅有 37，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-01 可用训练天数仅有 38，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-02 可用训练天数仅有 39，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-03 可用训练天数仅有 40，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-07 可用训练天数仅有 41，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-08 可用训练天数仅有 42，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-09 可用训练天数仅有 43，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-10 可用训练天数仅有 44，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-13 可用训练天数仅有 45，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-14 可用训练天数仅有 46，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-15 可用训练天数仅有 47，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-16 可用训练天数仅有 48，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-17 可用训练天数仅有 49，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-20 可用训练天数仅有 50，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-21 可用训练天数仅有 51，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-22 可用训练天数仅有 52，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-23 可用训练天数仅有 53，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-24 可用训练天数仅有 54，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-27 可用训练天数仅有 55，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-28 可用训练天数仅有 56，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-29 可用训练天数仅有 57，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-30 可用训练天数仅有 58，略过该日打分。
+2025-12-01 18:33:34 [WARNING] [U2DailyScoringBacktest] 交易日 2020-05-06 可用训练天数仅有 59，略过该日打分。
+2025-12-01 18:34:40 [INFO] [U2DailyScoringBacktest] [U3 Backtest] 总体统计：交易日数=1332, 样本数=5328, 命中率(label_u2=1 比例)=0.8829
+2025-12-01 18:34:40 [INFO] [U2DailyScoringBacktest] [U3 Backtest] 按年份统计：
+ year  n_days  n_samples  hit_rate
+ 2020     163        652    0.9325
+ 2021     243        972    0.9074
+ 2022     242        968    0.8946
+ 2023     242        968    0.8884
+ 2024     242        968    0.8636
+ 2025     200        800    0.8150
+2025-12-01 18:34:40 [INFO] [U2DailyScoringBacktest] 候选股明细已写入：reports\u3_daily_scoring_backtest_ultrashort_main.csv
+2025-12-01 19:04:41 [INFO] [U2DailyScoringBacktest] 使用引擎: u3
+2025-12-01 19:04:41 [INFO] [U2DailyScoringBacktest] 读取数据集：data/datasets\ultrashort_main.parquet
+2025-12-01 19:04:41 [INFO] [U2DailyScoringBacktest] 回测日期区间：2019-01-01 ~ 2025-11-28（数据全体区间：2020-02-07 ~ 2025-10-31）
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-10 可用训练天数仅有 1，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-11 可用训练天数仅有 2，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-12 可用训练天数仅有 3，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-13 可用训练天数仅有 4，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-14 可用训练天数仅有 5，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-17 可用训练天数仅有 6，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-18 可用训练天数仅有 7，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-19 可用训练天数仅有 8，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-20 可用训练天数仅有 9，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-21 可用训练天数仅有 10，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-24 可用训练天数仅有 11，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-25 可用训练天数仅有 12，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-26 可用训练天数仅有 13，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-27 可用训练天数仅有 14，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-02-28 可用训练天数仅有 15，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-02 可用训练天数仅有 16，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-03 可用训练天数仅有 17，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-04 可用训练天数仅有 18，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-05 可用训练天数仅有 19，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-06 可用训练天数仅有 20，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-09 可用训练天数仅有 21，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-10 可用训练天数仅有 22，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-11 可用训练天数仅有 23，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-12 可用训练天数仅有 24，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-13 可用训练天数仅有 25，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-16 可用训练天数仅有 26，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-17 可用训练天数仅有 27，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-18 可用训练天数仅有 28，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-19 可用训练天数仅有 29，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-20 可用训练天数仅有 30，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-23 可用训练天数仅有 31，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-24 可用训练天数仅有 32，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-25 可用训练天数仅有 33，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-26 可用训练天数仅有 34，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-27 可用训练天数仅有 35，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-30 可用训练天数仅有 36，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-03-31 可用训练天数仅有 37，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-01 可用训练天数仅有 38，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-02 可用训练天数仅有 39，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-03 可用训练天数仅有 40，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-07 可用训练天数仅有 41，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-08 可用训练天数仅有 42，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-09 可用训练天数仅有 43，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-10 可用训练天数仅有 44，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-13 可用训练天数仅有 45，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-14 可用训练天数仅有 46，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-15 可用训练天数仅有 47，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-16 可用训练天数仅有 48，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-17 可用训练天数仅有 49，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-20 可用训练天数仅有 50，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-21 可用训练天数仅有 51，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-22 可用训练天数仅有 52，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-23 可用训练天数仅有 53，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-24 可用训练天数仅有 54，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-27 可用训练天数仅有 55，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-28 可用训练天数仅有 56，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-29 可用训练天数仅有 57，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-04-30 可用训练天数仅有 58，略过该日打分。
+2025-12-01 19:04:41 [WARNING] [U2DailyScoringBacktest] 交易日 2020-05-06 可用训练天数仅有 59，略过该日打分。
+2025-12-01 19:05:44 [INFO] [U2DailyScoringBacktest] [U3 Backtest] 总体统计：交易日数=1332, 样本数=5328, 命中率(label_u2=1 比例)=0.8829
+2025-12-01 19:05:44 [INFO] [U2DailyScoringBacktest] [U3 Backtest] 按年份统计：
+ year  n_days  n_samples  hit_rate
+ 2020     163        652    0.9325
+ 2021     243        972    0.9074
+ 2022     242        968    0.8946
+ 2023     242        968    0.8884
+ 2024     242        968    0.8636
+ 2025     200        800    0.8150
+2025-12-01 19:05:44 [INFO] [U2DailyScoringBacktest] 候选股明细已写入：reports\u3_daily_scoring_backtest_ultrashort_main.csv

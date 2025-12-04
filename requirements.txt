@@ -1,0 +1,20 @@
+# LightHunter base dependencies
+
+pandas
+numpy
+colorama
+requests
+urllib3
+curl_cffi
+fake-useragent
+akshare
+psutil
+joblib
+scikit-learn
+torch
+duckdb
+pyarrow
+pyzmq
+aiohttp
+beautifulsoup4
+pyyaml

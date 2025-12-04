@@ -1,0 +1,31 @@
+{
+  "version": "Mk-RiskConfig R10",
+  "risk_brain": {
+    "db_file": "market_ts.db",
+    "model_file": "risk_brain.pkl",
+    "horizon_min": 10,
+    "dd_threshold": -3.0,
+    "min_amount": 20000000.0,
+    "min_turnover": 1.0
+  },
+  "paper_trader": {
+    "risk_limits": {
+      "max_dd_pct": 12.0,
+      "day_loss_pct": -4.0,
+      "day_dd_pct": 6.0,
+      "min_equity_ratio": 0.5
+    },
+    "kelly": {
+      "enable": true,
+      "min_win_prob": 0.51,
+      "odds": 2.0,
+      "kelly_scale": 0.5,
+      "max_kelly_pct": 0.4,
+      "min_trade_amount": 5000.0
+    }
+  },
+  "ts_backtest": {
+    "use_risk_brain": true,
+    "risk_threshold": 0.6
+  }
+}

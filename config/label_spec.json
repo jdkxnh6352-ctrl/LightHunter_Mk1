@@ -1,0 +1,159 @@
+{
+  "version": "mk3-ultrashort-v1",
+  "description": "A-share ultra-short-term (T+1 / 3-day) labeling scheme for LightHunter Mk3.",
+  "labels": {
+    "ULTRA_T1_RET_C2C": {
+      "name": "T+1 Close-to-Close Log Return",
+      "name_zh": "隔日收盘收益（对数收益）",
+      "kind": "regression",
+      "family": "return",
+      "horizon_days": 1,
+      "window_days": 1,
+      "base_price": "close",
+      "log_return": true,
+      "clip": 0.3,
+      "description": "log(close_{t+1} / close_t)，主回归标签，用于预测隔日收益。"
+    },
+    "ULTRA_T1_DIR_3C": {
+      "name": "T+1 Direction 3-class",
+      "name_zh": "隔日方向三分类",
+      "kind": "classification",
+      "family": "direction",
+      "base_label": "ULTRA_T1_RET_C2C",
+      "horizon_days": 1,
+      "classes": {
+        "-1": "明显下跌",
+        "0": "震荡/小波动",
+        "1": "明显上涨"
+      },
+      "thresholds": {
+        "neg": -0.02,
+        "pos": 0.02
+      },
+      "description": "基于隔日收益的方向三分类标签，用于主超短线分类任务。"
+    },
+    "ULTRA_T1_HIT_TP": {
+      "name": "T+1 Take-Profit Hit",
+      "name_zh": "次日是否触及止盈价",
+      "kind": "classification",
+      "family": "barrier_tp",
+      "horizon_days": 1,
+      "base_price": "close",
+      "price_high_col": "high",
+      "tp_pct": 0.03,
+      "description": "次日 high 是否 >= 当日 close*(1+tp_pct)，1=触及止盈，0=未触及。"
+    },
+    "ULTRA_T1_HIT_SL": {
+      "name": "T+1 Stop-Loss Hit",
+      "name_zh": "次日是否触及止损价",
+      "kind": "classification",
+      "family": "barrier_sl",
+      "horizon_days": 1,
+      "base_price": "close",
+      "price_low_col": "low",
+      "sl_pct": -0.03,
+      "description": "次日 low 是否 <= 当日 close*(1+sl_pct)，1=触及止损，0=未触及。"
+    },
+    "ULTRA_T3_MAX_UP": {
+      "name": "3-day Max Run-up",
+      "name_zh": "3日最大浮盈",
+      "kind": "regression",
+      "family": "max_runup",
+      "horizon_days": 3,
+      "window_days": 3,
+      "base_price": "close",
+      "price_high_col": "high",
+      "log_return": false,
+      "description": "从当日 close 到未来 3 日内最高价的最大涨幅 (max(high_{t+1..t+3}/close_t - 1))。"
+    },
+    "ULTRA_T3_MAX_DD": {
+      "name": "3-day Max Drawdown",
+      "name_zh": "3日最大回撤",
+      "kind": "regression",
+      "family": "max_drawdown",
+      "horizon_days": 3,
+      "window_days": 3,
+      "base_price": "close",
+      "price_low_col": "low",
+      "log_return": false,
+      "description": "从当日 close 到未来 3 日内最低价的最大跌幅 (min(low_{t+1..t+3}/close_t - 1))。"
+    },
+    "ULTRA_T3_OUTCOME_5C": {
+      "name": "3-day Trade Outcome 5-class",
+      "name_zh": "3日交易结果五分类",
+      "kind": "classification",
+      "family": "outcome_3d",
+      "horizon_days": 3,
+      "base_price": "close",
+      "price_high_col": "high",
+      "price_low_col": "low",
+      "classes": {
+        "-2": "大亏",
+        "-1": "小亏",
+        "0": "震荡/无效",
+        "1": "小赢",
+        "2": "大赢"
+      },
+      "params": {
+        "tp_big": 0.06,
+        "tp_small": 0.03,
+        "sl_big": -0.06,
+        "sl_small": -0.03
+      },
+      "description": "基于 3 日内最大浮盈/回撤，对交易结果进行五分类，用于策略层评估。"
+    },
+    "ULTRA_EMO_PHASE_5C": {
+      "name": "Market Emotion Phase 5-class",
+      "name_zh": "市场情绪阶段五分类",
+      "kind": "classification",
+      "family": "emo_phase",
+      "horizon_days": 0,
+      "source_column": "emo_phase",
+      "classes": {
+        "0": "平静期",
+        "1": "启动期",
+        "2": "高潮期",
+        "3": "退潮期",
+        "4": "冰点期"
+      },
+      "description": "由情绪引擎预先计算的市场情绪阶段标签，按交易日广播到个股。"
+    }
+  },
+  "tasks": {
+    "ultrashort_t1_direction": {
+      "name": "A股超短线 T+1 方向分类",
+      "primary_label": "ULTRA_T1_DIR_3C",
+      "aux_labels": [
+        "ULTRA_T1_RET_C2C",
+        "ULTRA_T1_HIT_TP",
+        "ULTRA_T1_HIT_SL",
+        "ULTRA_T3_MAX_UP",
+        "ULTRA_T3_MAX_DD",
+        "ULTRA_EMO_PHASE_5C"
+      ]
+    },
+    "ultrashort_t1_regression": {
+      "name": "A股超短线 T+1 收益回归",
+      "primary_label": "ULTRA_T1_RET_C2C",
+      "aux_labels": [
+        "ULTRA_T1_DIR_3C",
+        "ULTRA_T1_HIT_TP",
+        "ULTRA_T1_HIT_SL",
+        "ULTRA_T3_MAX_UP",
+        "ULTRA_T3_MAX_DD",
+        "ULTRA_EMO_PHASE_5C"
+      ]
+    },
+    "ultrashort_t3_swing": {
+      "name": "A股超短线 3 日交易结果分类",
+      "primary_label": "ULTRA_T3_OUTCOME_5C",
+      "aux_labels": [
+        "ULTRA_T3_MAX_UP",
+        "ULTRA_T3_MAX_DD",
+        "ULTRA_T1_RET_C2C",
+        "ULTRA_T1_DIR_3C",
+        "ULTRA_EMO_PHASE_5C"
+      ]
+    }
+  }
+}

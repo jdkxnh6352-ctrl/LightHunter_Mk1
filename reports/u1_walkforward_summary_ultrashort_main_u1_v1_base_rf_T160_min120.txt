@@ -1,0 +1,10 @@
+==== U1 Walk-Forward 回测统计 ====
+n_days: 1272
+total_return: 0.43419244111993915
+ann_return: 0.0740537113419042
+ann_vol: 0.2357854716238962
+sharpe: 0.3140724101102718
+max_drawdown: -0.4627211635012225
+win_ratio: 0.4937106918238994
+n_trade_days: 1272
+n_total_trades: 3815
