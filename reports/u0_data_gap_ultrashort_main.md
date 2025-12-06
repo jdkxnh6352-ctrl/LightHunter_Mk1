@@ -1,6 +1,6 @@
 # 数据缺口体检报告 - ultrashort_main
 
-- 生成时间：2025-12-05 12:08:35
+- 生成时间：2025-12-06 20:40:05
 - 数据文件：`G:\LightHunter_Mk1\data\ultrashort_main.parquet`
 - 行数：5568
 - 列数：14

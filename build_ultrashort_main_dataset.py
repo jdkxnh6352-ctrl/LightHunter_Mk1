@@ -1,17 +1,26 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 """
-build_ultrashort_main_dataset.py
+构建 / 更新 ultrashort_main 数据集的工具脚本。
 
-作用：
-- 根据 job_id = ultrashort_main，构建 / 更新主回测用的数据集 parquet 文件
-- 现在支持两种情况：
-  1）存在 data/ultrashort_main_raw.csv → 从 raw CSV 构建 / 更新 parquet
-  2）不存在 raw CSV 但已存在 data/datasets/ultrashort_main.parquet → 打印警告，跳过更新，沿用旧数据
+用法示例：
+    python build_ultrashort_main_dataset.py --job-id ultrashort_main
 
-后面等我们把「原始数据抓取」做好，只要每天把增量日线数据 append 到
-data/ultrashort_main_raw.csv，再跑这个脚本，就会自动更新数据集。
+逻辑说明：
+1. 默认假设原始日线数据 CSV 为：
+       data/{job_id}_raw.csv
+   输出 parquet 数据集为：
+       data/datasets/{job_id}.parquet
+
+2. 如果找到 raw CSV：
+   - 读入 CSV，并自动识别日期列（优先 trade_date / date / as_of）。
+   - 如果已有旧 parquet，则与之合并去重（按 [code, 日期列] 去重），
+     再按日期排序后写回 parquet。
+   - 如果没有旧 parquet，就直接用 CSV 构建。
+
+3. 如果找不到 raw CSV：
+   - 如果已有旧 parquet：给出 [WARN]，保留旧数据集，不报错退出；
+   - 如果连旧 parquet 都没有：给出 [ERROR]，并抛异常退出。
 """
 
 import argparse
@@ -21,94 +30,118 @@ from typing import Optional
 import pandas as pd
 
 
-def detect_date_col(df: pd.DataFrame) -> str:
-    """
-    自动检测日期列名，支持：
-    - trade_date
-    - date
-    - as_of
-    """
-    for col in ["trade_date", "date", "as_of"]:
+def log_build(msg: str) -> None:
+    print(f"[BUILD] {msg}")
+
+
+def log_warn(msg: str) -> None:
+    print(f"[WARN] {msg}")
+
+
+def log_error(msg: str) -> None:
+    print(f"[ERROR] {msg}")
+
+
+def detect_date_col(df: pd.DataFrame) -> Optional[str]:
+    """在常见列名里自动找日期列。"""
+    candidates = ["trade_date", "date", "as_of"]
+    for col in candidates:
         if col in df.columns:
             return col
-    raise ValueError("原始数据中找不到日期列（期望列名之一：trade_date / date / as_of）")
+    return None
 
 
-def build_dataset(raw_csv: Path, output: Path) -> None:
-    print(f"[BUILD] 原始数据 CSV 路径: {raw_csv}")
-    if not raw_csv.exists():
-        raise FileNotFoundError(f"找不到原始数据文件: {raw_csv}")
+def build_dataset(job_id: str) -> None:
+    print(f"==== 构建 {job_id} 数据集 ====")
 
-    df = pd.read_csv(raw_csv)
+    data_dir = Path("data")
+    raw_csv = data_dir / f"{job_id}_raw.csv"
+    ds_dir = data_dir / "datasets"
+    ds_dir.mkdir(parents=True, exist_ok=True)
+    ds_path = ds_dir / f"{job_id}.parquet"
 
-    # 自动找日期列并统一成 trade_date
-    date_col = detect_date_col(df)
-    if date_col != "trade_date":
-        df = df.rename(columns={date_col: "trade_date"})
+    log_build(f"job_id           : {job_id}")
+    log_build(f"原始 CSV 路径    : {raw_csv}")
+    log_build(f"输出数据集路径   : {ds_path}")
 
-    # 统一日期格式
-    df["trade_date"] = pd.to_datetime(df["trade_date"]).dt.date
+    # 情况 1：存在 raw CSV，执行增量 / 全量构建
+    if raw_csv.exists():
+        log_build("发现原始 CSV 文件，开始读取并构建数据集……")
 
-    # 去重、按日期排序（根据你现有数据结构可以再细化）
-    df = df.drop_duplicates().sort_values(["trade_date"])
+        df_raw = pd.read_csv(raw_csv)
+        date_col = detect_date_col(df_raw)
+        if date_col is None:
+            raise ValueError(
+                "在原始 CSV 中未找到日期列（期待列名之一：trade_date / date / as_of）。"
+            )
 
-    output.parent.mkdir(parents=True, exist_ok=True)
-    print(f"[BUILD] 写出数据集到: {output}  行数: {len(df):,}")
-    df.to_parquet(output, index=False)
+        # 规范日期类型
+        df_raw[date_col] = pd.to_datetime(df_raw[date_col])
+
+        # 如果有 code 列，尽量保证是字符串
+        if "code" in df_raw.columns:
+            df_raw["code"] = df_raw["code"].astype(str)
+
+        # 如果存在历史 parquet，则做增量合并
+        if ds_path.exists():
+            log_build("检测到已有历史 parquet 数据集，正在与 raw CSV 做增量合并……")
+            df_old = pd.read_parquet(ds_path)
+
+            # 尽量保证旧数据类型一致
+            if date_col in df_old.columns:
+                df_old[date_col] = pd.to_datetime(df_old[date_col])
+            if "code" in df_old.columns:
+                df_old["code"] = df_old["code"].astype(str)
+
+            # 合并去重
+            if "code" in df_raw.columns and "code" in df_old.columns:
+                subset_cols = ["code", date_col]
+            else:
+                subset_cols = [date_col]
+
+            df_all = pd.concat([df_old, df_raw], ignore_index=True)
+            df_all = df_all.drop_duplicates(subset=subset_cols)
+            df_all = df_all.sort_values(date_col).reset_index(drop=True)
+        else:
+            log_build("未检测到历史 parquet 数据集，本次将直接用 raw CSV 构建。")
+            df_all = df_raw.sort_values(date_col).reset_index(drop=True)
+
+        # 写回 parquet
+        ds_path.parent.mkdir(parents=True, exist_ok=True)
+        df_all.to_parquet(ds_path, index=False)
+
+        last_trade = df_all[date_col].max()
+        log_build(f"数据集构建完成，共 {len(df_all)} 行，"
+                  f"最新交易日: {last_trade:%Y-%m-%d}")
+
+    # 情况 2：没有 raw CSV，尝试沿用旧 parquet
+    else:
+        if ds_path.exists():
+            log_warn(
+                f"找不到原始数据文件: {raw_csv}，但已经存在历史数据集: {ds_path}"
+            )
+            log_warn("当前先跳过数据集构建，沿用已有数据。")
+            log_warn("等每日原始数据抓取脚本就绪后，再从 raw CSV 构建 / 更新数据集。")
+        else:
+            log_error(f"既找不到原始数据文件: {raw_csv}，也找不到历史数据集: {ds_path}")
+            log_error("无法构建数据集，请先准备好原始 CSV 再重试。")
+            # 抛异常让上层流程感知失败
+            raise FileNotFoundError(
+                f"missing raw csv ({raw_csv}) and dataset ({ds_path})"
+            )
 
 
-def main(argv: Optional[list] = None) -> None:
-    parser = argparse.ArgumentParser()
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="构建 / 更新 ultrashort_main 数据集"
+    )
     parser.add_argument(
         "--job-id",
         required=True,
-        help="数据集 ID，例如 ultrashort_main",
+        help="任务 ID，例如 ultrashort_main",
     )
-    parser.add_argument(
-        "--raw-csv",
-        default=None,
-        help="可选：指定原始 CSV 路径；默认使用 data/{job_id}_raw.csv",
-    )
-    parser.add_argument(
-        "--output",
-        default=None,
-        help="可选：指定输出 parquet 路径；默认使用 data/datasets/{job_id}.parquet",
-    )
-
-    args = parser.parse_args(argv)
-
-    job_id = args.job_id
-    data_dir = Path("data")
-    datasets_dir = data_dir / "datasets"
-
-    raw_csv = Path(args.raw_csv) if args.raw_csv else data_dir / f"{job_id}_raw.csv"
-    output = Path(args.output) if args.output else datasets_dir / f"{job_id}.parquet"
-
-    print("===== 构建 ultrashort_main 数据集 =====")
-    print(f"[BUILD] job_id         : {job_id}")
-    print(f"[BUILD] 原始 CSV 路径  : {raw_csv}")
-    print(f"[BUILD] 输出数据集路径 : {output}")
-
-    if not raw_csv.exists():
-        # 没有原始 CSV 的情况
-        if output.exists():
-            print(
-                f"[WARN] 找不到原始数据文件: {raw_csv}，"
-                f"但已经存在历史数据集: {output}"
-            )
-            print("[WARN] 当前先跳过数据集构建，沿用已有数据。")
-            print("[WARN] 等接好原始数据抓取后，再启用从 raw CSV 构建数据集的逻辑。")
-            return
-        else:
-            # 连旧数据集都没有，只能报错
-            raise FileNotFoundError(
-                f"既找不到原始数据文件 {raw_csv}，也不存在历史数据集 {output}，"
-                f"请先准备一份原始 CSV 或手动放置初始 parquet 数据集。"
-            )
-
-    # 正常从 raw CSV 构建 / 更新数据集
-    build_dataset(raw_csv, output)
-    print("[BUILD] 数据集构建完成。")
+    args = parser.parse_args()
+    build_dataset(args.job_id)
 
 
 if __name__ == "__main__":

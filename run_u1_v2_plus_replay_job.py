@@ -3,10 +3,10 @@
 run_u1_v2_plus_replay_job.py
 
 功能：
-1）为 U1 v2_plus 模型补齐 2020–2025 全部历史打分（u1_scores_*.csv）
+1）为 U1 v2_plus 模型补齐 2020–2025 的全部历史打分（reports/u1_scores_*.csv）
 2）在打分齐全后，调用 tools.u1_strategy_replay 做策略级回放（top3，无风控）
 
-使用方法：
+使用方法（在项目根目录）：
     python run_u1_v2_plus_replay_job.py
 """
 
@@ -17,6 +17,7 @@ from pathlib import Path
 import pandas as pd
 
 # ===== 全局配置 =====
+
 JOB_ID = "ultrashort_main"
 TAG = "u1_v2_plus_rf"
 RET_COL = "ret_1"
@@ -30,13 +31,26 @@ MIN_AMOUNT = 20_000_000
 # 使用哪一组特征（在 tools.u1_daily_scoring_ml 里定义）
 FEATURES = "v2_plus"
 
+# 与 tools.u1_daily_scoring_ml 默认保持一致
+MIN_TRAIN_DAYS = 80
+
+# 如果你想人为截断起止日期，可以在这里改；
+# 写 None 就表示“不限制，以数据 + min_train_days 为准”
+START_DATE = None         # 例如 "2020-03-20"
+END_DATE = None           # 例如 "2025-10-31"
+
 
 def detect_date_col(df: pd.DataFrame) -> str:
     """自动识别日期列名。"""
-    for col in ("trade_date", "date", "as_of"):
+    for col in ("trade_date", "trading_date", "date", "as_of"):
         if col in df.columns:
             return col
-    raise ValueError("未找到日期列（期待列名之一：trade_date / date / as_of）。")
+    raise ValueError("未找到日期列（期待列名之一：trade_date / trading_date / date / as_of）。")
+
+
+def parse_date(s: str):
+    """把 'YYYY-MM-DD' 字符串转成 pandas 时间戳."""
+    return pd.to_datetime(s).normalize()
 
 
 def main() -> None:
@@ -58,13 +72,70 @@ def main() -> None:
     date_col = detect_date_col(df)
     print(f"[Replay] 使用日期列: {date_col}")
 
-    # 取去重后的交易日列表，并按时间排序
-    trade_dates = (
+    # 规范成 DatetimeIndex，去重、排序
+    all_dates = (
         pd.to_datetime(df[date_col].dropna())
+        .dt.normalize()
         .sort_values()
-        .dt.strftime("%Y-%m-%d")
         .unique()
-        .tolist()
+    )
+    all_dates_idx = pd.DatetimeIndex(all_dates)
+
+    if all_dates_idx.size <= MIN_TRAIN_DAYS:
+        raise SystemExit(
+            f"[ERROR] 数据集中可用交易日只有 {all_dates_idx.size} 天，"
+            f"少于 min_train_days={MIN_TRAIN_DAYS}，无法回放。"
+        )
+
+    first_date = all_dates_idx[0]
+    last_date = all_dates_idx[-1]
+    safe_start_date = all_dates_idx[MIN_TRAIN_DAYS]
+
+    print(
+        f"[Replay] 全部交易日范围: {first_date:%Y-%m-%d} ~ {last_date:%Y-%m-%d}，"
+        f"共 {all_dates_idx.size} 天"
+    )
+    print(
+        f"[Replay] 按 min_train_days={MIN_TRAIN_DAYS}，"
+        f"首个可安全回放的交易日: {safe_start_date:%Y-%m-%d}"
+    )
+
+    # 应用可选的 START_DATE / END_DATE 限制，但不会早于 safe_start_date
+    effective_start = safe_start_date
+    if START_DATE:
+        user_start = parse_date(START_DATE)
+        if user_start < safe_start_date:
+            print(
+                f"[Replay] 提示：用户指定 start_date={user_start:%Y-%m-%d} "
+                f"历史数据不足 {MIN_TRAIN_DAYS} 天，自动调整为 "
+                f"{safe_start_date:%Y-%m-%d}。"
+            )
+        else:
+            effective_start = user_start
+
+    effective_end = None
+    if END_DATE:
+        effective_end = parse_date(END_DATE)
+
+    # 选出实际用于回放的 as_of 交易日
+    mask = all_dates_idx >= effective_start
+    if effective_end is not None:
+        mask &= all_dates_idx <= effective_end
+
+    selected_dates = all_dates_idx[mask]
+
+    # 再保险：如果用户给的 END_DATE 太早，可能没有任何可用日期
+    if selected_dates.size == 0:
+        raise SystemExit(
+            "[ERROR] 过滤 START_DATE / END_DATE 后没有任何可用交易日，"
+            "请检查配置。"
+        )
+
+    trade_dates = selected_dates.strftime("%Y-%m-%d").tolist()
+
+    print(
+        f"[Replay] 实际用于回放的 as_of 交易日数: {len(trade_dates)} 个，"
+        f"范围 {trade_dates[0]} ~ {trade_dates[-1]}"
     )
 
     reports_dir = root / "reports"
@@ -105,6 +176,7 @@ def main() -> None:
             "--features",
             FEATURES,
         ]
+
         print(f"[Replay] 生成打分: as_of={as_of} ……")
         subprocess.run(cmd, check=True)
 
