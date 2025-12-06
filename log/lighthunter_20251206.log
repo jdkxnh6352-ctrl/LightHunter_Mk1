@@ -1,0 +1,1 @@
+2025-12-06 02:35:16 [WARNING] [U1WalkForward] 以下特征在数据集中不存在，将被忽略: ['amt_to_mean_20', 'log_amount', 'log_amt_mean_20', 'log_volume', 'rev_1']
